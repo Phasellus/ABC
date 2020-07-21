@@ -87,39 +87,57 @@ add_action('wp_ajax_nopriv_show_json', 'show_json');
 function show_json()
 {
     header ('Content-Type: application/json');
-    if((!empty($_POST['user_email'])) && (($_POST['selectTrade']) != 'Wybierz branze') &&(!empty($_POST['description'])))
-    {
-        $results = array(
-            'success' => 1,
-            'msg' => 'Wyslano dane',
-        );
-        echo json_encode($results);
-
-        global $boundary;
-        $boundary = md5(uniqid(rand()));
-        $content = $_POST['description'];
-        add_filter('wp_mail_content_type', 'set_html_content_type');
-        $content_of_mail =
-            "This is a multi-part message in MIME format.\r\n" .
-            "--" . $boundary . "\r\n" .
-            "Content-type: text/plain;charset=utf-8\r\n\r\n" .
-            strip_tags(str_replace('<br>', "\r\n", $content)) . "\r\n" .
-            "--" . $boundary . "\r\n" .
-            "Content-type: text/html;charset=utf-8\r\n\r\n" .
-            $content;
-        $sent = wp_mail($_POST['user_email'], 'Nowa wiadomość E_mail', $content_of_mail);
-        remove_filter('wp_mail_content_type', 'set_html_content_type');
-        return $sent;
-    }
-
-    else
+    if((empty($_POST['user_email'])) || (($_POST['selectTrade']) == 'Wybierz branze') || (empty($_POST['description'])))
     {
         $results = array(
             "error" => 1,
-            'msg' => 'Niepoprawne dane',
+            'msg' => 'Uzupełnij wszystkie pola',
         );
         echo json_encode($results);
         exit();
     }
+    elseif(is_email($_POST['user_email'], $deprecated =false))
+    {
+        $results = array(
+            'error' => 0,
+            'msg' => 'Wyslano dane',
+        );
+        echo json_encode($results);
+        $to=$_POST['user_email'];
+        $content=$_POST['description'];
+        $change =$_POST['selectTrade'];
+        $title='Nowy Email';
+        $number= $_POST['employeeCount'];
+
+        sf_send_email($to, $content, $title, $change,$number);
+        exit();
+    }
+    else
+   {
+       $results = array(
+       "error" => 1,
+       'msg' => 'Nie prawidlowe dane',
+        );
+        echo json_encode($results);
+        exit();
+   }
+
 }
 
+function sf_send_email($to, $content, $title, $change, $number)
+{
+    global $boundary;
+    $boundary = md5(uniqid(rand()));
+    add_filter('wp_mail_content_type', 'set_html_content_type');
+    $content_of_mail =
+        "This is a multi-part message in MIME format.\r\n" .
+        "--" . $boundary . "\r\n" .
+        "Content-type: text/plain;charset=utf-8\r\n\r\n" .
+        strip_tags(str_replace('<br>', "\r\n", $content)).
+        "\r\n". "-" .
+        strip_tags(str_replace('<br>', "\r\n", $change))
+        ."\r\n". "Ilość Pracowników: " .strip_tags(str_replace('', "\r\n", $number));
+    $sent = wp_mail($to, $title, $content_of_mail);
+    remove_filter('wp_mail_content_type', 'set_html_content_type');
+    return $sent;
+}
