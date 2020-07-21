@@ -104,19 +104,18 @@ function show_json()
         );
         echo json_encode($results);
         $to=$_POST['user_email'];
-        $content=$_POST['description'];
-        $change =$_POST['selectTrade'];
+        $content=$_POST['description'].'<br>'.$_POST['selectTrade'].'<br>'. $_POST['employeeCount'];
         $title='Nowy Email';
-        $number= $_POST['employeeCount'];
 
-        sf_send_email($to, $content, $title, $change,$number);
+
+        sf_send_email($to, $content, $title);
         exit();
     }
     else
    {
        $results = array(
        "error" => 1,
-       'msg' => 'Nie prawidlowe dane',
+       'msg' => 'Nieprawidlowe dane',
         );
         echo json_encode($results);
         exit();
@@ -124,19 +123,18 @@ function show_json()
 
 }
 
-function sf_send_email($to, $content, $title, $change, $number)
+function sf_send_email($to, $content, $title)
 {
     global $boundary;
-    $boundary = md5(uniqid(rand()));
-    add_filter('wp_mail_content_type', 'set_html_content_type');
+    $boundary = md5(uniqid(rand()));	add_filter('wp_mail_content_type','set_html_content_type');
     $content_of_mail =
         "This is a multi-part message in MIME format.\r\n" .
         "--" . $boundary . "\r\n" .
         "Content-type: text/plain;charset=utf-8\r\n\r\n" .
-        strip_tags(str_replace('<br>', "\r\n", $content)).
-        "\r\n". "-" .
-        strip_tags(str_replace('<br>', "\r\n", $change))
-        ."\r\n". "Ilość Pracowników: " .strip_tags(str_replace('', "\r\n", $number));
+        strip_tags(str_replace('<br>',"\r\n",$content)) . "\r\n".
+        "--" . $boundary . "\r\n".
+        "Content-type: text/html;charset=utf-8\r\n\r\n" .
+        $content;
     $sent = wp_mail($to, $title, $content_of_mail);
     remove_filter('wp_mail_content_type', 'set_html_content_type');
     return $sent;
