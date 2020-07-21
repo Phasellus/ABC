@@ -7,13 +7,16 @@ const countPercents = (value, maxVal) => {
 };
 const ajaxForm = {
   init : function () {
-    $('').on('submit',function (e) {
-      e.preventDefault()
+    $('form.new_form_js').on('submit',function(e) {
+      e.preventDefault();
       let data={
-        action : ''
+        email : $('form.new_form_js #user_email').val(),
+        description : $('form.new_form_js #description').val(),
+        change : $('form.new_form_js #selectTrade').val(),
+        number : $('form.new_form_js #employeesCount').val(),
       }
           $.ajax({
-            url: window.ajaxurl,
+            url: ajax_link,
             data: data,
             method: 'POST',
             success: (response) => {

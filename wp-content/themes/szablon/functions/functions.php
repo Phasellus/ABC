@@ -139,3 +139,10 @@ function sf_send_email($to, $content, $title)
     remove_filter('wp_mail_content_type', 'set_html_content_type');
     return $sent;
 }
+
+function ajax_script(){ ?>
+    <script type="text/javascript">
+        const ajax_link = '<?php echo admin_url( "admin-ajax.php?action=show_json" ); ?>';
+    </script><?php
+}
+add_action ( 'wp_head', 'ajax_script' );
