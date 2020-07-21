@@ -143,6 +143,7 @@ function sf_send_email($to, $content, $title)
 function ajax_script(){ ?>
     <script type="text/javascript">
         const ajax_link = '<?php echo admin_url( "admin-ajax.php?action=show_json" ); ?>';
+        const token = '<?php echo wp_create_nonce( "secure_nonce_name" ); ?>';
     </script><?php
 }
 add_action ( 'wp_head', 'ajax_script' );

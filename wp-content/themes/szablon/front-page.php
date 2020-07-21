@@ -4,7 +4,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__box">
-                <div class="header__item -logo"><img class="logo" src="<?php echo TEMP_URI;?> /assets/images/logo/logo.svg"></div>
+                <div class="header__item -logo"><img class="logo" src="<?php echo TEMP_URI;?>/assets/images/logo/logo.svg"></div>
                 <div class="header__item -nav">
                     <!-- START NAV-->
                     <nav class="nav">
@@ -33,11 +33,11 @@
                 <div class="header__item -mobile">
                     <!-- START MOBILE NAV-->
                     <div class="mobileNav">
-                        <div class="mobileNav__menuIconBox"><img class="mobileNav__menuIcon" src="<?php echo TEMP_URI;?> /assets/images/mobileMenu/menuMobile.png">
+                        <div class="mobileNav__menuIconBox"><img class="mobileNav__menuIcon" src="<?php echo TEMP_URI;?>/assets/images/mobileMenu/menuMobile.png">
                             <div class="mobileNav__menuIconText">menu</div>
                         </div>
                         <div class="mobileNav__container">
-                            <div class="mobileNav__buttonBox"><img class="mobileNav__closeButton" src="<?php echo TEMP_URI;?> /assets/images/mobileMenu/closeMenuMobile.png"></div>
+                            <div class="mobileNav__buttonBox"><img class="mobileNav__closeButton" src="<?php echo TEMP_URI;?>/assets/images/mobileMenu/closeMenuMobile.png"></div>
                             <nav class="mobileNav__nav">
                                 <ul class="mobileNav__list">
                                     <li class="mobileNav__item"><a class="mobileNav__link" href="#">O nas</a></li>
@@ -66,7 +66,7 @@
 </div>
 <div id="blurredOverlay"></div>
 <div class="bannerMain withBannerBox">
-    <div class="bannerMain__image" style="background-image:url('<?php echo TEMP_URI;?> /assets/images/fota_glowna.png');"></div>
+    <div class="bannerMain__image" style="background-image:url('<?php echo TEMP_URI;?>/assets/images/fota_glowna.png');"></div>
     <div class="bannerMain__content">
         <div class="bannerMain__leftBox">
             <div class="bannerMain__slogan textWhite">Personnel Service <br><span>Lider zatrudnienia i rozwiązań HR</span></div>
@@ -189,11 +189,11 @@
 <div class="positionRelative -noMarginTop">
     <div class="contentPanel bgWhite textDark">
         <div class="contentPanel__content">
-            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?> /assets/images/main/suitcase.jpg"></div>
+            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?>/assets/images/main/suitcase.jpg"></div>
             <div class="contentPanel__rightBox">
                 <h1 class="contentPanel__textHeader">Zobacz, co możemy <br> dla Ciebie zrobić <br> <br></h1>
                 <div class="contentPanel__text">Jeśli szukasz fachowców do rozwijania swojej firmy, my pomożemy Ci znaleźć najlepszych specjalistów i najbardziej doświadczonych kandydatów z różnych branż.</div><br>
-                <button class="-addMarginTop contentPanel__buttonRed">więcej</button><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?> /assets/images/main/tiny_people_suitcase.jpg">
+                <button class="-addMarginTop contentPanel__buttonRed">więcej</button><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?>/assets/images/main/tiny_people_suitcase.jpg">
             </div>
         </div>
     </div>
@@ -204,31 +204,31 @@
                 <h1 class="iconsPanel__headerText">Zakres usług:</h1>
                 <div class="iconsPanel__listContainer">
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/part_time_job.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/part_time_job.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Praca tymczasowa</a></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/outsourcing_process.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/outsourcing_process.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Outsourcing procesów</a></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/outsourcing_employees.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/outsourcing_employees.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Outsourcing pracowniczy</a></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/outsourcing_it.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/outsourcing_it.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Outsourcing IT</a></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/hr_consulting.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/hr_consulting.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Doradztwo HR</a></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/outplacement.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/outplacement.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Outplacement</a></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/servicesIcons/specialists_recruitment.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/servicesIcons/specialists_recruitment.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><a class="iconsPanel__traitTextAbsolute">Rekrutacje specjalistów i kadry menadżerskiej</a></div>
                     </div>
                 </div>
@@ -237,19 +237,19 @@
     </div>
     <div class="contentPanel bgWhite textDark">
         <div class="contentPanel__content -directionRowReverse">
-            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?>  /assets/images/main/people.jpg"></div>
+            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?> /assets/images/main/people.jpg"></div>
             <div class="contentPanel__rightBox">
                 <h1 class="contentPanel__textHeader">Dla nas liczą się ludzie! <br> <br></h1>
-                <div class="contentPanel__text">Personnel Service w liczbach.</div><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?> /assets/images/main/tinyPeople-main-people.jpg">
+                <div class="contentPanel__text">Personnel Service w liczbach.</div><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?>/assets/images/main/tinyPeople-main-people.jpg">
             </div>
         </div>
     </div>
     <div class="contentPanel bgWhite textDark">
         <div class="contentPanel__content">
-            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?> /assets/images/main/superman.jpg"></div>
+            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?>/assets/images/main/superman.jpg"></div>
             <div class="contentPanel__rightBox">
                 <h1 class="contentPanel__textHeader">Poznaj branże, <br> dla których pracujemy <br> <br></h1>
-                <div class="contentPanel__text">Sprawnie zrekrutujemy dla Ciebie kompetentnych pracowników z branży zgodnej z profilem Twojej firmy.</div><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?>  /assets/images/main/tinyPeople-main-trades.jpg">
+                <div class="contentPanel__text">Sprawnie zrekrutujemy dla Ciebie kompetentnych pracowników z branży zgodnej z profilem Twojej firmy.</div><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?> /assets/images/main/tinyPeople-main-trades.jpg">
             </div>
         </div>
     </div>
@@ -260,35 +260,35 @@
                 <h1 class="iconsPanel__headerText">Znajdź swoją branżę</h1>
                 <div class="iconsPanel__listContainer -decreaseMarginLeft">
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/production.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/production.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">Produkcja</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/gastronomy.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/gastronomy.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">Branża spożywcza</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/ecommerce.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/ecommerce.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">Outsourcing pracowniczy</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/automotive.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/automotive.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">Automotive</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/rtv.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/rtv.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">RTV/AGD</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/more.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/more.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">...i wiele innych</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/transport.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/transport.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">Transport i logistyka</span></div>
                     </div>
                     <div class="iconsPanel__servicesBox">
-                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?> /assets/images/craftsIcons/bpo.svg&quot;);"></div>
+                        <div class="iconsPanel__servicesIcon" style="background-image: url(&quot;<?php echo TEMP_URI;?>/assets/images/craftsIcons/bpo.svg&quot;);"></div>
                         <div class="iconsPanel__labelBox"><span class="iconsPanel__traitTextAbsolute -normalFontWeight">BPO/SSC/ITO</span></div>
                     </div>
                 </div>
@@ -297,17 +297,17 @@
     </div>
     <div class="contentPanel bgWhite textDark">
         <div class="contentPanel__content -directionRowReverse">
-            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?> /assets/images/main/world.jpg"></div>
+            <div class="contentPanel__leftBox"><img class="contentPanel__photo" src="<?php echo TEMP_URI;?>/assets/images/main/world.jpg"></div>
             <div class="contentPanel__rightBox">
                 <h1 class="contentPanel__textHeader">Posiadamy oddziały na kluczowych rynkach <br> <br></h1>
-                <div class="contentPanel__text">Oddziały w strategicznych miejscach na świecie pozwalają nam sprawnie przeprowadzać proces rekrutacji. Dzięki temu, naszym klientom skracamy czas oczekiwania na pracownika, a kandydaci mogą liczyć na oferty pracy od firm działających na wielu rynkach.</div><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?> /assets/images/main/tiny_people_world.jpg">
+                <div class="contentPanel__text">Oddziały w strategicznych miejscach na świecie pozwalają nam sprawnie przeprowadzać proces rekrutacji. Dzięki temu, naszym klientom skracamy czas oczekiwania na pracownika, a kandydaci mogą liczyć na oferty pracy od firm działających na wielu rynkach.</div><img class="contentPanel__tinyPeopleImage" src="<?php echo TEMP_URI;?>/assets/images/main/tiny_people_world.jpg">
             </div>
         </div>
     </div>
     <div class="chairMan">
         <div class="chairMan__content">
-            <div class="chairMan__leftBox"><img class="chairMan__photo" src="<?php echo TEMP_URI;?> /assets/chairman/chairman.png"></div>
-            <div class="chairMan__rightBox"><img class="chairMan__logo" src="<?php echo TEMP_URI;?> /assets/chairman/logo.png">
+            <div class="chairMan__leftBox"><img class="chairMan__photo" src="<?php echo TEMP_URI;?>/assets/chairman/chairman.png"></div>
+            <div class="chairMan__rightBox"><img class="chairMan__logo" src="<?php echo TEMP_URI;?>/assets/chairman/logo.png">
                 <div class="chairMan__text">Krzysztof Inglot jest Prezesem Personnel Service S.A. Menadżer HR z 20-letnim doświadczeniem zdobytym m.in. w Work Service S.A. Prowadzi projekty restrukturyzacyjne w obszarze zasobów ludzkich dla kluczowych firm w Polsce. Autor wielu komentarzy i wypowiedzi eksperckich w mediach, dotyczących bieżącej sytuacji na rynku pracy. <br/> <br/> W 2013 roku Krzysztof Inglot nabył uprawnienia i kompetencje do pełnienia funkcji Mediatora i Arbitra, a w 2015 roku dołączył do zespołu ekspertów Centrum Badań i Analiz Pracodawców RP.</div>
             </div>
         </div>
@@ -322,27 +322,27 @@
                     </div>
                     <div class="recruitmentRequirements__whos">
                         <!-- recruitmentReqItem-->
-                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?> /assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
+                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?>/assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
                             <p>Specjalistów z Polski</p>
                         </div>
                         <!-- recruitmentReqItem-->
-                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?> /assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
+                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?>/assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
                             <p>Specjalistów z Polski</p>
                         </div>
                         <!-- recruitmentReqItem-->
-                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?> /assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
+                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?>/assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
                             <p>Specjalistów z Polski</p>
                         </div>
                         <!-- recruitmentReqItem-->
-                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?> /assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
+                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?>/assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
                             <p>Specjalistów z Polski</p>
                         </div>
                         <!-- recruitmentReqItem-->
-                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?> /assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
+                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?>/assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
                             <p>Specjalistów z Polski</p>
                         </div>
                         <!-- recruitmentReqItem-->
-                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?> /assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
+                        <div class="recruitmentReqItem"><img class="recruitmentReqItem__image" src="<?php echo TEMP_URI;?>/assets/images/recruitmentRequirements/manWithHardHat.svg" alt="logo">
                             <p>Specjalistów z Polski</p>
                         </div>
                     </div>
@@ -368,56 +368,56 @@
                             <div class="pleaseContact__text">
                                 <div class="pleaseContact__separated">
                                     <div class="pleaseContact__item">
-                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?> /assets/images/pin.svg" alt="pin"></div><span>Dział sprzedaży</span>
+                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?>/assets/images/pin.svg" alt="pin"></div><span>Dział sprzedaży</span>
                                     </div>
-                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrow.png"></div>
+                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrow.png"></div>
                                 </div>
                                 <div class="pleaseContact__separated">
                                     <div class="pleaseContact__item">
-                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?> /assets/images/pin.svg" alt="pin"></div><span>Dział rekrutacji</span>
+                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?>/assets/images/pin.svg" alt="pin"></div><span>Dział rekrutacji</span>
                                     </div>
-                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrow.png"></div>
+                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrow.png"></div>
                                 </div>
                                 <div class="pleaseContact__separated">
                                     <div class="pleaseContact__item">
-                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?> /assets/images/pin.svg" alt="pin"></div><span>Dział rekrutacji specjalistów i kadry zarządzającej z Polski</span>
+                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?>/assets/images/pin.svg" alt="pin"></div><span>Dział rekrutacji specjalistów i kadry zarządzającej z Polski</span>
                                     </div>
-                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrow.png"></div>
+                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrow.png"></div>
                                 </div>
                                 <div class="pleaseContact__separated">
                                     <div class="pleaseContact__item">
-                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?> /assets/images/pin.svg" alt="pin"></div><span>Biuro i administracja</span>
+                                        <div class="pleaseContact__icon"><img src="<?php echo TEMP_URI;?>/assets/images/pin.svg" alt="pin"></div><span>Biuro i administracja</span>
                                     </div>
-                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrow.png"></div>
+                                    <div class="pleaseContact__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrow.png"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="pleaseContact__contactInfo">
                             <div class="pleaseContact__contactWrapper">
                                 <div class="pleaseContact__worker">
-                                    <div class="pleaseContact__avatar"><img src="<?php echo TEMP_URI;?> /assets/images/avatar.png" alt="avatar"></div>
+                                    <div class="pleaseContact__avatar"><img src="<?php echo TEMP_URI;?>/assets/images/avatar.png" alt="avatar"></div>
                                     <div class="pleaseContact__workerInfo"><span>Kinga Marczak</span><span>Nazwa stanowiska</span></div>
                                 </div>
                                 <div class="pleaseContact__phone">
-                                    <div class="pleaseContact__phone__icon"><img src="<?php echo TEMP_URI;?> /assets/images/telephone.svg" alt="avatar"></div>
+                                    <div class="pleaseContact__phone__icon"><img src="<?php echo TEMP_URI;?>/assets/images/telephone.svg" alt="avatar"></div>
                                     <div class="pleaseContact__phoneNumber"><span>+48 71 757 22 08</span></div>
                                 </div>
                                 <div class="pleaseContact__email">
-                                    <div class="pleaseContact__email__icon"><img src="<?php echo TEMP_URI;?> /assets/images/airplane.svg" alt="avatar"></div>
+                                    <div class="pleaseContact__email__icon"><img src="<?php echo TEMP_URI;?>/assets/images/airplane.svg" alt="avatar"></div>
                                     <div class="pleaseContact__emailAddress"><span>biuro@personnelservice.pl</span></div>
                                 </div>
                             </div>
                             <div class="pleaseContact__contactWrapper">
                                 <div class="pleaseContact__worker">
-                                    <div class="pleaseContact__avatar"><img src="<?php echo TEMP_URI;?> /assets/images/avatar.png" alt="avatar"></div>
+                                    <div class="pleaseContact__avatar"><img src="<?php echo TEMP_URI;?>/assets/images/avatar.png" alt="avatar"></div>
                                     <div class="pleaseContact__workerInfo"><span>Jan Kolwaski</span><span>Nazwa stanowiska</span></div>
                                 </div>
                                 <div class="pleaseContact__phone">
-                                    <div class="pleaseContact__phone__icon"><img src="<?php echo TEMP_URI;?> /assets/images/telephone.svg" alt="avatar"></div>
+                                    <div class="pleaseContact__phone__icon"><img src="<?php echo TEMP_URI;?>/assets/images/telephone.svg" alt="avatar"></div>
                                     <div class="pleaseContact__phoneNumber"><span>+48 43 234 23 43</span></div>
                                 </div>
                                 <div class="pleaseContact__email">
-                                    <div class="pleaseContact__email__icon"><img src="<?php echo TEMP_URI;?> /assets/images/airplane.svg" alt="avatar"></div>
+                                    <div class="pleaseContact__email__icon"><img src="<?php echo TEMP_URI;?>/assets/images/airplane.svg" alt="avatar"></div>
                                     <div class="pleaseContact__emailAddress"><span>asdasdadsasdasdasd@personnelservice.pl</span></div>
                                 </div>
                             </div>
@@ -4144,62 +4144,62 @@
                                 <div class="contactAgency__text">
                                     <div class="contactAgency__separated">
                                         <div class="contactAgency__item">
-                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoGlobe.png" alt="pin"></div><span>Polska</span>
+                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoGlobe.png" alt="pin"></div><span>Polska</span>
                                         </div>
-                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrowRed.png"></div>
+                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrowRed.png"></div>
                                     </div>
                                     <div class="contactAgency__separated">
                                         <div class="contactAgency__item">
-                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoGlobe.png" alt="pin"></div><span>Ukraina</span>
+                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoGlobe.png" alt="pin"></div><span>Ukraina</span>
                                         </div>
-                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrowRed.png"></div>
+                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrowRed.png"></div>
                                     </div>
                                     <div class="contactAgency__separated">
                                         <div class="contactAgency__item">
-                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoGlobe.png" alt="pin"></div><span>Niemcy</span>
+                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoGlobe.png" alt="pin"></div><span>Niemcy</span>
                                         </div>
-                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrowRed.png"></div>
+                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrowRed.png"></div>
                                     </div>
                                     <div class="contactAgency__separated">
                                         <div class="contactAgency__item">
-                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoGlobe.png" alt="pin"></div><span>Węgry</span>
+                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoGlobe.png" alt="pin"></div><span>Węgry</span>
                                         </div>
-                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrowRed.png"></div>
+                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrowRed.png"></div>
                                     </div>
                                     <div class="contactAgency__separated">
                                         <div class="contactAgency__item">
-                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoGlobe.png" alt="pin"></div><span>Czechy</span>
+                                            <div class="contactAgency__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoGlobe.png" alt="pin"></div><span>Czechy</span>
                                         </div>
-                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?> /assets/images/separatorArrowRed.png"></div>
+                                        <div class="contactAgency__arrow"><img src="<?php echo TEMP_URI;?>/assets/images/separatorArrowRed.png"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="contactAgency__contactInfo">
                                 <div class="contactAgency__contactWrapper">
                                     <div class="contactAgency__worker">
-                                        <div class="contactAgency__avatar"><img src="<?php echo TEMP_URI;?> /assets/images/pointOnMap.png" alt="avatar"></div>
+                                        <div class="contactAgency__avatar"><img src="<?php echo TEMP_URI;?>/assets/images/pointOnMap.png" alt="avatar"></div>
                                         <div class="contactAgency__workerInfo"><span>SkyTower,<br>ul. Gwiaździsta 66 lokal 2B.06,<br>53-413 Wrocław,<br>Polska</span></div>
                                     </div>
                                     <div class="contactAgency__phone">
-                                        <div class="contactAgency__phone__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoCall.png" alt="avatar"></div>
+                                        <div class="contactAgency__phone__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoCall.png" alt="avatar"></div>
                                         <div class="contactAgency__phoneNumber"><a href="tel:+48717572208">+48 71 757 22 08</a></div>
                                     </div>
                                     <div class="contactAgency__email">
-                                        <div class="contactAgency__email__icon"><img src="<?php echo TEMP_URI;?> /assets/images/airplane.svg" alt="avatar"></div>
+                                        <div class="contactAgency__email__icon"><img src="<?php echo TEMP_URI;?>/assets/images/airplane.svg" alt="avatar"></div>
                                         <div class="contactAgency__emailAddress"><a class="negativeHover" href="mailto:biuro@personnelservice.pl">biuro@personnelservice.pl</a></div>
                                     </div>
                                 </div>
                                 <div class="contactAgency__contactWrapper">
                                     <div class="contactAgency__worker">
-                                        <div class="contactAgency__avatar"><img src="<?php echo TEMP_URI;?> /assets/images/pointOnMap.png" alt="avatar"></div>
+                                        <div class="contactAgency__avatar"><img src="<?php echo TEMP_URI;?>/assets/images/pointOnMap.png" alt="avatar"></div>
                                         <div class="contactAgency__workerInfo"><span>XYZ,<br>ul. XYZ XYZ lokal XYZ,<br>11-111 Lwów,<br>Ukraina</span></div>
                                     </div>
                                     <div class="contactAgency__phone">
-                                        <div class="contactAgency__phone__icon"><img src="<?php echo TEMP_URI;?> /assets/images/icoCall.png" alt="avatar"></div>
+                                        <div class="contactAgency__phone__icon"><img src="<?php echo TEMP_URI;?>/assets/images/icoCall.png" alt="avatar"></div>
                                         <div class="contactAgency__phoneNumber"><span>+48 11 111 11 11</span></div>
                                     </div>
                                     <div class="contactAgency__email">
-                                        <div class="contactAgency__email__icon"><img src="<?php echo TEMP_URI;?> /assets/images/airplane.svg" alt="avatar"></div>
+                                        <div class="contactAgency__email__icon"><img src="<?php echo TEMP_URI;?>/assets/images/airplane.svg" alt="avatar"></div>
                                         <div class="contactAgency__emailAddress"><span>asdasdasdasdasdasdasd@personnelservice.pl</span></div>
                                     </div>
                                 </div>
@@ -4286,6 +4286,6 @@
             </div>
         </div>
     </div>
-    <div class="backgroundSector shadow" style="background-image: url(<?php echo TEMP_URI;?> /assets/images/runners.png)"></div>
+    <div class="backgroundSector shadow" style="background-image: url(<?php echo TEMP_URI;?>/assets/images/runners.png)"></div>
 </div>
 <?php get_footer();

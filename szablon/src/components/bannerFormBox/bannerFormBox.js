@@ -7,28 +7,30 @@ const countPercents = (value, maxVal) => {
 };
 const ajaxForm = {
   init : function () {
+    console.log(1)
     $('form.new_form_js').on('submit',function(e) {
+      console.log(2)
       e.preventDefault();
-      let data={
+      let new_data={
         email : $('form.new_form_js #user_email').val(),
         description : $('form.new_form_js #description').val(),
         change : $('form.new_form_js #selectTrade').val(),
         number : $('form.new_form_js #employeesCount').val(),
       }
-          $.ajax({
-            url: ajax_link,
-            data: data,
-            method: 'POST',
-            success: (response) => {
-              console.log(response)
-            },
-            error: function(xhr, data) {
-              $('[data-send]').html($('[data-send]').data('send'));
-              $('.bannerFormBox__thinTextAlert').html(
-                'Błąd serwera, spróbuj skontaktować się z administratorem serwera'
-              );
-            }
-          });
+      $.ajax({
+        url: ajax_link,
+        data: new_data,
+        method: 'POST',
+        success: (response) => {
+          console.log(response)
+        },
+        error: function(xhr, data) {
+          $('[data-send]').html($('[data-send]').data('send'));
+          $('.bannerFormBox__thinTextAlert').html(
+            'Błąd serwera, spróbuj skontaktować się z administratorem serwera'
+          );
+        }
+      });
     })
   }
 }
@@ -65,7 +67,6 @@ const frontPageForm = {
   init() {
     this.setData();
     this.bindEvents();
-    ajaxForm.init()
   },
   setData() {
     this.data.form = $('.js-main-box-form');
@@ -295,6 +296,7 @@ const bannerFormBox = {
       bannerFormBox.initializeSelectSpecializationForm();
       bannerFormBox.initializeAgreementModal();
       frontPageForm.init();
+      ajaxForm.init()
     });
   }
 };
