@@ -1,0 +1,32 @@
+.languagesSwitcher
+  +font-lato
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+  color: $black
+
+  .selectric
+    border: 0
+
+  .selectric .button
+    width: 20px
+    height: 20px
+    background-color: $mercury
+    color: $torchRed
+
+    &:after
+      border: 5px solid transparent
+      border-top-color: $torchRed
+      border-bottom: none
+
+  .selectric .label
+    font-size: 14px
+    text-overflow: clip
+    overflow: visible
+
+    +max($bp-md)
+      margin-left: 10px
+      margin-right: 0
+
+  .selectric-items ul, .selectric-items li
+    font-size: 14px

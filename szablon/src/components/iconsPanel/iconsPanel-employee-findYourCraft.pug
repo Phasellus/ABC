@@ -1,0 +1,12 @@
+// 1 Variant
+- const images = [{img:"./assets/images/craftsIcons/production.svg", label: 'Produkcja'}, {img: "./assets/images/craftsIcons/gastronomy.svg", label: 'Branża spożywcza'}, {img: "./assets/images/craftsIcons/ecommerce.svg", label: 'Outsourcing pracowniczy'}, {img: "./assets/images/craftsIcons/automotive.svg", label: 'Automotive'}, {img: "./assets/images/craftsIcons/rtv.svg", label: 'RTV/AGD'}, {img: "./assets/images/craftsIcons/more.svg", label: '...i wiele innych'}, {img: "./assets/images/craftsIcons/transport.svg", label: 'Transport i logistyka'}, {img: "./assets/images/craftsIcons/bpo.svg", label: 'BPO/SSC/ITO'}]
+.iconsPanel.bgDarkGray.textWhite
+  .iconsPanel__content
+    .iconsPanel__servicesPanel
+      h1.iconsPanel__headerText Znajdź swoją branżę
+      .iconsPanel__listContainer.-decreaseMarginLeft
+        each val in images
+          .iconsPanel__servicesBox
+            div(style=`background-image: url("${val.img}");`).iconsPanel__servicesIcon
+            .iconsPanel__labelBox
+              span.iconsPanel__traitTextAbsolute.-normalFontWeight=val.label

@@ -1,0 +1,152 @@
+div.cvPanel
+  .cvPanel__backgroundImg(style=`background-image:url('./assets/images/bgCvPanel.png');`)
+  .cvPanel__contentBg
+    .cvPanel__content(id="cvPanel__content__text")
+      .cvPanel__wrapper
+        .cvPanel__topbar
+          .cvPanel__logo
+            img(src='./assets/images/logoCv.png')
+          .cvPanel__previous
+            a.cvPanel__button(href='#')
+              img(src='./assets/images/previous.svg')
+              span Cofnij
+        .cvPanel__main
+          .cvPanel__title
+            span Czekamy na Ciebie,
+                br
+                |  wypełnij kwestionariusz
+          .cvPanel__paragraph
+            span Dane kandydata
+          .cvPanel__form
+            form(action='#' name="addCV" id="addCV")
+              .cvPanel__item
+                label Imię
+                  span.cvPanel__require *
+                .cvPanel__input
+                  input.cvPanel__inputField(name="name")
+                  .cvPanel__info
+                    span Wpisz imię
+              .cvPanel__item
+                label Nazwisko
+                  span.cvPanel__require *
+                .cvPanel__input
+                  input.cvPanel__inputField(name="surname")
+                  .cvPanel__info
+                      span Wpisz nazwisko
+              .cvPanel__item
+                label Data urodzenia
+                .cvPanel__input
+                  input.cvPanel__inputField(name="birthday" type="text"  placeholder="DD/MM/YYYY" parse="DD/MM/YYYY")
+                  .cvPanel__info
+                    span Wpisz poprawna date
+              .cvPanel__item
+                label Telefon komórkowy (+48 xxx xxx xxx)
+                  span.cvPanel__require *
+                .cvPanel__input
+                  input.cvPanel__inputField(name="phoneNumber" placeholder="xxx xxx xxx")
+                  .cvPanel__info
+                    span Wpisz poprawny numer telefonu
+              .cvPanel__item
+                label Email
+                  span.cvPanel__require *
+                .cvPanel__input
+                  input.cvPanel__inputField(placeholder="example@domain.com" name="email" type="email")
+                  .cvPanel__info
+                    span Wpisz poprawny adres email
+              .cvPanel__item
+                label Adres
+                .cvPanel__input
+                  input.cvPanel__inputField(placeholder="Jana Kochanowskiego 23/3" name="address")
+              .cvPanel__item
+                label Miasto
+                  span.cvPanel__require *
+                .cvPanel__input
+                  input.cvPanel__inputField(placeholder="Gliwice" name="city")
+                  .cvPanel__info
+                    span Wybierz miasto
+              .cvPanel__item
+                label Kraj
+                  span.cvPanel__require *
+                .cvPanel__input
+                  input.cvPanel__inputField(placeholder="Polska" name="country")
+                  .cvPanel__info
+                    span Wpisz kraj
+              .cvPanel__item
+                label Wykształcenie
+                .cvPanel__input
+                  input.cvPanel__inputField(placeholder="średnie" name="education")
+              .cvPanel__item
+                label Kwalifikacje zawodowe
+                .cvPanel__input
+                  textarea.cvPanel__textAreaField(placeholder="Opisz swoje doświadczenie i umiejętności. Jeśli masz jakieś uprawnienia, napisz o nich." name="professQualif")
+              .cvPanel__item
+                label Przebieg dotychczasowego zatrudnienia
+                .cvPanel__input
+                  textarea.cvPanel__textAreaField(placeholder="Napisz gdzie pracowałeś (-aś) i co robiłeś (-aś). Tutaj możesz wypisać stanowiska i zakresy obowiązków." name="experience")
+              .cvPanel__tellUs
+                span Powiedz nam więcej o pracy swoich marzeń
+              .cvPanel__item
+                label Jakiej pracy szukasz? (np. rodzaje stanowisk, branża, inne oczekiwania)
+                  span.cvPanel__require *
+                .cvPanel__input
+                  textarea.cvPanel__textAreaField(placeholder="Tutaj możesz pisać bez ograniczeń :)" name="kindOfJob")
+                  .cvPanel__info(id="textarea_info")
+                    span Napisz czego szukasz!
+              .cvPanel__privacyPolicy
+                span Administratorem Pani/Pana danych osobowych jest Personnel Service Sp. z o.o., ul. Bolesława Chrobrego 5, 11-400
+                    |  Kętrzyn, NIP 8943069469, REGON 363064852. Zapoznaj się z naszą polityką prywatności. &nbsp;
+                    a(href="#") Pokaż więcej.
+              .cvPanel__checkboxArea
+                .cvPanel__checkAll
+                  label.cvPanel__checkboxContainer
+                    span Zaznacz wszystkie
+                    input(type='checkbox' name='agreementAll' id="checkAll").cvPanel__checkboxInput
+                    span.cvPanel__checkmarkGray
+                .cvPanel__checkboxPanel
+                  .cvPanel__checkboxItem
+                    label.cvPanel__checkboxContainer
+                      span
+                          span.cvPanel__require *
+                          |Wyrażam zgodę na przetwarzanie moich danych osobowych, zawartych w tym formularzu lub/i w innych
+                          |przekazanych przeze mnie dokumentach, w celu związanym z udziałem mojej osoby w niniejszym procesie
+                          |rekrutacyjnym.
+                      input(type='checkbox' name='agreement1').cvPanel__checkboxInput.agreement
+                      span.cvPanel__checkmark
+                      .cvPanel__info
+                        span Potrzebujemy Twojej zgody
+                  .cvPanel__checkboxItem
+                    label.cvPanel__checkboxContainer
+                      span
+                          span.cvPanel__require *
+                          |Wyrażam zgodę na przetwarzanie moich danych osobowych, zawartych w tym formularzu lub/i w innych
+                          |przekazanych przeze mnie dokumentach, w celu związanym z udziałem mojej osoby w niniejszym procesie
+                          |rekrutacyjnym.
+                      input(type='checkbox' name='agreement2').cvPanel__checkboxInput.agreement
+                      span.cvPanel__checkmark
+                      .cvPanel__info
+                        span Potrzebujemy Twojej zgody
+                  .cvPanel__checkboxItem
+                    label.cvPanel__checkboxContainer
+                      span Wyrażam zgodę na przetwarzanie moich danych osobowych w celu marketingu produktów i usług własnych Personnel Service i kontaktowanie się za mną w formie email/sms/mms.
+                      input(type='checkbox' name='agreement3').cvPanel__checkboxInput.agreement
+                      span.cvPanel__checkmarkGray
+                  .cvPanel__checkboxItem
+                    label.cvPanel__checkboxContainer
+                      span Wyrażam zgodę na przetwarzanie moich danych osobowych w celu marketingu produktów i usług własnych Personal Service i kontaktowanie się za mną telefonicznie.
+                      input(type='checkbox' name='agreement4').cvPanel__checkboxInput.agreement
+                      span.cvPanel__checkmarkGray
+                  .cvPanel__checkboxItem
+                    label.cvPanel__checkboxContainer
+                      span Wyrażam zgodę na przetwarzanie moich danych osobowych w celu marketingu produktów i usług podmiotów powiązanych z  Personnel Service i kontaktowanie się za mną w formie email/sms/mms.
+                      input(type='checkbox' name='agreement4').cvPanel__checkboxInput.agreement
+                      span.cvPanel__checkmarkGray
+                  .cvPanel__checkboxItem
+                    label.cvPanel__checkboxContainer
+                      span Wyrażam zgodę na przetwarzanie moich danych osobowych w celu marketingu produktów i usług
+                          |podmiotów powiązanych z  Personnel Service i kontaktowanie się za mną telefonicznie.
+                      input(type='checkbox' name='agreement4').cvPanel__checkboxInput.agreement
+                      span.cvPanel__checkmarkGray
+              .cvPanel__submitButton
+                button(type='submit') wyślij
+
+

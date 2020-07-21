@@ -1,0 +1,229 @@
+@import '../../utils/styles/selectric'
+.pleaseContact
+  display: flex
+  justify-content: center
+
+  &__content
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__wrapper
+    display: flex
+    justify-content: center
+    padding: 100px 0
+
+    +max(980)
+      padding: 20px 0
+
+  &__main
+    display: flex
+    width: 85%
+    max-width: 1340px
+    justify-content: space-between
+    align-items: center
+    flex-direction: row
+
+    +max(1350)
+      flex-direction: column
+      width: 100%
+
+  &__title
+    padding-left: 10px
+
+    +max(1350)
+      padding-bottom: 20px
+
+    +max(960)
+      padding: 0
+
+  &__title span
+    display: block
+    font-family: 'Lato', sans-serif
+    font-size: 65px
+    font-weight: bold
+
+    +max(980)
+      font-size: 33px
+
+  &__selectBox
+    display: none
+    width: 450px
+    padding: 40px 0
+
+    +max(980)
+      display: block
+      width: 100%
+      max-width: 373px
+
+  &__details
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    max-width: 700px
+    min-width: 700px
+
+    +max(980)
+      width: 95%
+      min-width: auto
+      padding: 0
+      flex-direction: column
+
+
+  &__info
+    display: flex
+    flex-direction: row
+    flex: 317px 0
+
+    +max(980)
+      display: none
+
+  &__text
+    display: flex
+    flex-direction: column
+    max-width: 317px
+    min-width: 317px
+    background-image: url("./../images/separatorBg.png")
+    background-repeat: repeat-y
+
+    +max(980)
+      background: none
+
+  &__separated
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 0
+    text-decoration: underline
+
+  &__item
+
+    font-size: 20px
+    font-family: 'Lato', sans-serif
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+
+  &__item span
+    padding-bottom: 2px
+    cursor: pointer
+    margin-left: 10px
+
+  &__icon
+    width: 26px
+    height: 35px
+    flex: 0 0 26px
+
+  &__icon img
+    display: none
+
+  &__arrow
+    width: 42px
+    height: 34px
+    flex: 0 0 42px
+
+    +max(980)
+      display: none
+
+  &__arrow img
+    display: none
+
+  &__contactWrapper
+    display: none
+    +max(980)
+      width: auto
+
+    &:first-child
+      display: block
+
+  &__contactInfo
+    display: flex
+    flex-direction: column
+    padding-left: 50px
+    flex: 383px 0
+    align-items: baseline
+
+    +max(980)
+      align-items: center
+      padding: 0
+      flex: auto
+      width: auto
+
+  &__worker
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-bottom: 20px
+
+  &__avatar img
+    border-radius: 999px
+    width: 60px
+    height: 60px
+    background: $masala
+
+  &__workerInfo
+    display: flex
+    flex-direction: column
+    margin-left: 10px
+
+  &__workerInfo span
+    font-family: 'Lato', sans-serif
+    font-size: 20px
+
+    &:first-child
+      font-size: 28px
+
+  &__phone
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-bottom: 20px
+
+    &__icon
+      width: 60px
+      text-align: center
+
+    &_icon img
+      width: 30px
+      height: 41px
+
+  &__phoneNumber
+    font-size: 20px
+    font-family: 'Lato', sans-serif
+    margin-left: 10px
+
+  &__email
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    &__icon
+      width: 60px
+      flex: 0 0 60px
+      text-align: center
+
+    &_icon img
+      width: 39px
+      height: 31px
+
+  &__emailAddress
+    font-size: 15px
+    font-family: 'Lato', sans-serif
+    margin-left: 10px
+    padding-bottom: 2px
+    word-break: break-all
+
+.pleaseContact__selectBox
+  +font-lato
+
+  .selectric
+    border: 0
+
+  .selectric .label
+    font-size: 17px
+
+  .selectric-items ul, .selectric-items li
+    font-size: 17px

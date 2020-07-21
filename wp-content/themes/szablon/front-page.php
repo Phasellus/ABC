@@ -81,7 +81,7 @@
                             <span class="-redText"> Powiedz nam kogo szukasz.</span>
                         </p>
                     </div>
-                    <form action="<?php echo admin_url('admin-ajax.php?action=show_json')?>" method="post">
+                    <form action="<?php echo admin_url('admin-ajax.php?action=show_json')?>" method="post" class="new_form_js">
                         <div class="bannerFormBox__inputSection">
                             <div class="bannerFormBox__item">
                                 <input class="bannerFormBox__boxInput" placeholder="Wpisz Emial" type="email" name="user_email">

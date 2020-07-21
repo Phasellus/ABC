@@ -1,0 +1,12 @@
+// 1 Variant
+- const imagesCraft = [{img:"./assets/images/servicesIcons/part_time_job.svg", label: 'Praca tymczasowa'}, {img: "./assets/images/servicesIcons/outsourcing_process.svg", label: 'Outsourcing procesów'}, {img: "./assets/images/servicesIcons/outsourcing_employees.svg", label: 'Outsourcing pracowniczy'}, {img: "./assets/images/servicesIcons/outsourcing_it.svg", label: 'Outsourcing IT'}, {img: "./assets/images/servicesIcons/hr_consulting.svg", label: 'Doradztwo HR'}, {img: "./assets/images/servicesIcons/outplacement.svg", label: 'Outplacement'}, {img: "./assets/images/servicesIcons/specialists_recruitment.svg", label: 'Rekrutacje specjalistów i kadry menadżerskiej'}]
+.iconsPanel.bgDarkGray.textWhite
+  .iconsPanel__content
+    .iconsPanel__servicesPanel
+      h1.iconsPanel__headerText Zakres usług:
+      .iconsPanel__listContainer
+        each val in imagesCraft
+          .iconsPanel__servicesBox
+            div(style=`background-image: url("${val.img}");`).iconsPanel__servicesIcon
+            .iconsPanel__labelBox
+              a.iconsPanel__traitTextAbsolute=val.label

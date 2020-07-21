@@ -1,0 +1,24 @@
+doctype html
+html(lang="pl")
+  head
+    title Szablon
+
+    meta(charset='utf-8')
+    meta(name='title', content='Szablon')
+    meta(name='description', content='Szablon opis')
+    meta(name='keywords', content='Szablon keywords')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', href='./assets/styles/main.min.css', type='text/css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Lato&display=swap', type='text/css')
+    link(href="https://use.fontawesome.com/releases/v5.0.7/css/all.css", rel="stylesheet")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    include ../../commons/favicon/favicon
+
+  body
+    include ../../commons/header/headerServices
+    include ../blurredOverlay/blurredOverlay
+    block content
+
+    include ../../commons/footer/footer
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
+    script(type="text/javascript" src="./assets/scripts/main.min.js")

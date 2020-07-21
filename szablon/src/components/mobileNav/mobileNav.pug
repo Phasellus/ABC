@@ -1,0 +1,43 @@
+// START MOBILE NAV
+.mobileNav
+  .mobileNav__menuIconBox
+    img(src="./assets/images/mobileMenu/menuMobile.png").mobileNav__menuIcon
+    .mobileNav__menuIconText menu
+  .mobileNav__container
+    .mobileNav__buttonBox
+      img(src="./assets/images/mobileMenu/closeMenuMobile.png").mobileNav__closeButton
+    nav.mobileNav__nav
+      ul.mobileNav__list
+        li.mobileNav__item.-active
+          a.mobileNav__link.-active(href="#") Dla pracodawcy
+          ul.mobileNav__subList
+            li.mobileNav__subItem
+              a.mobileNav__link(href="#") Item Item Item
+            li.mobileNav__subItem
+              a.mobileNav__link(href="#") Item Item
+            li.mobileNav__subItem
+              a.mobileNav__link(href="www.google.com") Itemsdads
+            li.mobileNav__subItem
+              a.mobileNav__link(href="#") Itemaaaaaaaasdadd
+        li.mobileNav__item
+          a.mobileNav__link(href="#") Dla pracownika
+          ul.mobileNav__subList
+            li.mobileNav__subItem
+              a.mobileNav__link(href="www.wp.pl") Item Item Item
+            li.mobileNav__subItem
+              a.mobileNav__link(href="#") Item Item
+            li.mobileNav__subItem
+              a.mobileNav__link(href="#") Itemsdads
+            li.mobileNav__subItem
+              a.mobileNav__link(href="#") Itemaaaaaaaasdadd
+        li.mobileNav__item
+          a.mobileNav__link(href="#") O nas
+        li.mobileNav__item
+          a.mobileNav__link(href="#") Relacje inwestorskie
+        li.mobileNav__item
+          a.mobileNav__link(href="#") Aktualności
+        li.mobileNav__item
+          a.mobileNav__link(href="#") Kontakt
+    .mobileNav__languages
+      include ../languagesSwitcher/languagesSwitcher
+// END MOBILE NAV

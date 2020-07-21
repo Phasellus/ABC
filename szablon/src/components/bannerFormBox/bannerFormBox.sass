@@ -1,0 +1,697 @@
+.bannerFormBox
+  width: 70%
+  background-color: #fff
+  display: flex
+  justify-content: center
+  position: relative
+  border-radius: 10px
+  padding-top: 5%
+  padding-bottom: 5%
+  box-shadow: 0 0 10px #000000
+  +maxHeight(600)
+      transform: scale(0.8)
+
+  =checkbox
+    display: block
+    position: relative
+    margin-bottom: 12px
+    padding: 7px 0 7px 50px
+    cursor: pointer
+    font-size: 2rem
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    color: #B4B4B4
+    +max(960)
+      padding: 5px 0 7px 40px
+
+  +max(1100)
+    width: 90%
+
+  +max(980)
+    width: 100%
+    margin: 0 auto
+
+  &:before
+    content: ''
+    height: 30px
+    width: 15px
+    position: absolute
+    right: 0
+    border-radius: 50% 0 0 50%
+    transform: translate(15px, 2%)
+    border-left: 15px solid black
+
+  &__content
+    +container
+    align-items: flex-start
+    justify-content: space-between
+    display: block
+    width: 100%
+    padding: 0 5%
+    +max(980)
+      align-items: center
+
+  &__upperText
+    font-family: 'Lato', sans-serif
+    font-size: 2.6rem
+    font-weight: bold
+    color: #444444
+
+  &__inputSection
+    mix-blend-mode: normal
+
+  &__boxInput
+    +input
+
+  &__boxSelect
+    +input
+
+  &__smallText
+    font-family: 'Lato', sans-serif
+    font-size: 20px
+    color: #8D8D8D
+    text-align: left
+    margin-top: 1.5em
+    +max(1550)
+      font-size: 18px
+
+    +max(1250)
+      font-size: 17px
+
+    +max(980)
+      font-size: 16px
+
+  &__thinText
+    margin: 20px 0
+
+    & > p
+      font-family: 'Lato', sans-serif
+      font-size: 2rem
+      color: #8D8D8D
+
+  &__sliderBox
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    flex-direction: row
+
+    & > div
+      min-height: 80px
+
+  &__sliderElementNarrow
+    width: 20%
+    display: inline-block
+    position: relative
+    +max(980)
+      width: 50%
+
+
+  .-sliderText
+    order: 3
+    +max(980)
+      order: 2
+
+  .-imagePeople
+    background-image: url('../../assets/images/slider_people_icon.svg')
+    background-repeat: no-repeat
+    background-position: center
+    +max(980)
+      background-position: left
+
+  &__sliderElementWide
+    display: inline-block
+    width: 60%
+    order: 2
+    +max(980)
+      width: 100%
+      order: 3
+
+  #employeesCount, #employeesCountMobile
+    font-family: 'Lato', sans-serif
+    font-size: 2.2em
+    line-height: 85px
+    font-weight: bold
+    color: $torchRed
+    text-align: center
+    +max(980)
+      text-align: right
+
+  #slider, #sliderMobile
+    margin-top: 40px
+    width: 100%
+    -webkit-appearance: none
+    outline: none
+    height: 10px
+    border-radius: 5px
+    cursor: pointer
+    background: linear-gradient(90deg, #F7001B 0%, #F7001B 50% , #d3d3d3 50% , #d3d3d3 100%)
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: 48px
+      height: 48px
+      border-radius: 24px
+      background: #F7001B
+      cursor: pointer
+      border: 11px solid #D1D1D1
+      box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16)
+
+    &::-moz-range-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      background: #F7001B
+      cursor: pointer
+      border: 11px solid #D1D1D1
+      box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16)
+
+  &__buttonContainer
+    display: flex
+    width: 100%
+
+  &__goBackLink
+    color: $boulder
+    font-size: 1.8rem
+    text-decoration: underline
+
+  &__buttonBoxLeft
+    width: 50%
+    padding-top: 5%
+    +max(1345)
+      width: 100%
+
+  &__buttonBoxRight
+    width: 50%
+    +max(1345)
+      width: 100%
+
+  &__buttonRed
+    @include btn-red
+    margin-top: 20px
+    float: right
+
+  &__imageBox
+    display: flex
+
+  &__imageBoxImage
+    width: 30%
+
+  .-silhouette
+    transform: translate(-100px, 4px)
+    +max(1645)
+      transform: scale(.9) translate(-125px, 26px)
+    +max(980)
+      transform: scale(1) translate(-125px, 5px)
+    +max(540)
+      transform: translate(-140px, 4px)
+
+  &__imageBoxText
+    width: 70%
+    position: relative
+
+  .-redText
+    color: $torchRed
+
+  &__employeeUpperText
+    font-size: 2.4rem
+    +max(1310)
+      font-size: 2.4rem
+    +max(1100)
+      margin-left: 30px
+    +max(980)
+      font-size: 5rem
+      margin-left: 0
+    +max(660)
+      font-size: 25px
+    +max(460)
+      font-size: 22px
+    +max(395)
+      font-size: 18px
+      margin-left: 10px
+    p
+      margin-top: 60px
+
+  &__silhouetteSmallText
+    padding-left: 120px
+    font-size: 18px
+    font-weight: 400
+    z-index: 2
+    position: absolute
+    bottom: 13%
+    +max(1260)
+      font-size: 13px
+      bottom: 40%
+      padding-left: 22%
+    +max(980)
+      bottom: 20%
+      padding-left: 0
+      font-size: 22px
+    +max(870)
+      font-size: 20px
+      padding-left: 7%
+    +max(720)
+      font-size: 18px
+      padding-left: 15%
+    +max(640)
+      font-size: 16px
+      padding-left: 20%
+    +max(580)
+      padding-left: 30%
+    +max(470)
+      padding-left: 40%
+      font-size: 14px
+    +max(415)
+      bottom: 40%
+      padding-left: 20%
+
+  &__workportLogoBox
+    width: 100%
+    display: flex
+    align-items: center
+    position: absolute
+    top: 0
+    div > p
+      margin: 0
+    +max(1345)
+      left: -15%
+    +max(1200)
+      transform: scale(.9)
+      left: -20%
+    +max(980)
+      transform: scale(1)
+      left: 0
+
+  &__workportLogoimage
+    padding-left: 2rem
+
+  &__appShopLabel
+    font-size: 3rem
+    text-align: center
+    width: 100%
+    //img
+    //  +max(1100)
+    //    transform: scale(.18)
+    +max(500)
+      font-size: 2rem
+
+  &__grayArea
+    width: 100%
+    display: flex
+    height: 9vw
+    max-height: 140px
+    background-color: #E4E4E4
+    position: absolute
+    bottom: 0
+    border-radius: 0 0 10px 10px
+    align-items: center
+    +max(980)
+      height: 17vw
+
+  &__item
+    position: relative
+
+  &__info
+    position: absolute
+    top: -15px
+    background: $pippin
+    padding: 5px 10px
+    border-radius: 4px
+    box-shadow: 0 3px 2px #00000026
+    right: 0
+    font-size: 16px
+    display: none
+    max-width: 300px
+    z-index: 2
+    +max(960)
+      margin-top: 10px
+      top: 72px
+      box-shadow: 0 -3px 2px #00000026
+      &.checkmarkBox
+        top: 20px !important
+        +max(980)
+          top: 25px !important
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      width: 16px
+      height: 16px
+      right: 15px
+      background-image: url('../../assets/images/arrowWarring.svg')
+      background-repeat: no-repeat
+      margin-top: 13px
+      z-index: 1
+      +max(960)
+        top: -28px
+        transform: rotate(180deg)
+        right: auto
+        left: 15px
+    span
+      color: $torchRed
+
+  &__mobileLink
+    width: 100%
+    text-align: center
+
+  &__imageMarketMobile
+    width: 50%
+    min-width: 100px
+
+  &__agreementLink, &__agreementMobileLink
+    color: $torchRed
+    & > a
+      text-decoration: underline
+
+  &__qrCodeBox
+    width: 50%
+    height: 100%
+    padding: 6% 4%
+    display: flex
+    flex-wrap: wrap
+    +max(980)
+      padding: 0
+      align-content: center
+    +min(1500)
+      padding: 3% 2%
+
+  &__qrCode
+    max-width: 100%
+    height: auto
+    +max(1060)
+      width: 80%
+
+  &__storeButton
+    max-width: 100%
+    height: auto
+    position: absolute
+    bottom: 2%
+
+  &__qrLeftBox
+    padding-right: .5rem
+    width: 50%
+
+  &__qrRightBox
+    padding-left: .5rem
+    width: 50%
+    position: relative
+
+  &__qrParagraph
+    font-size: 1rem
+
+  &__thinTextAlert
+    padding: 15px
+    border: 1px solid #ebccd1
+    border-radius: 4px
+    color: #a94442
+    background-color: #f2dede
+    margin-bottom: 0
+    &:empty
+      display: none
+
+  &__checkboxContainer
+    +checkbox
+
+  &__agreementCheckboxContainer
+    +checkbox
+    display: inline-block
+    margin-bottom: 0
+    line-height: 150%
+
+  &__checkboxInput
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+
+  &__checkmark
+    position: absolute
+    top: 0
+    left: 0
+    height: 38px
+    width: 38px
+    border: solid 3px $pumice
+    border-radius: 5px
+    background-color: $white
+    +max(960)
+      height: 28px
+      width: 28px
+  &__checkmarkGray
+    @extend .cvPanel__checkmark
+    border: solid 3px $pumice
+
+  &__checkboxContainer:hover input ~ &__checkmark, &__agreementCheckboxContainer:hover input ~ &__checkmark
+    background-color: $white
+
+  &__checkboxContainer input:checked ~ &__checkmark, &__agreementCheckboxContainer input:checked ~ &__checkmark
+    background-color: $white
+
+  &__checkmark:after
+    content: ""
+    position: absolute
+    display: none
+
+  &__checkboxContainer input:checked ~ &__checkmark:after, &__agreementCheckboxContainer input:checked ~ &__checkmark:after
+    display: block
+
+  &__blackText
+    color: black
+
+  &__checkboxContainer &__checkmark:after, &__agreementCheckboxContainer &__checkmark:after
+    left: 10px
+    top: 2px
+    width: 10px
+    height: 20px
+    border: solid $torchRed
+    border-width: 0 3px 3px 0
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+    +max(960)
+      width: 5px
+      height: 13px
+      left: 7px
+      top: 2px
+
+  &__checkboxPanel
+    padding-left: 50px
+    +max(960)
+      padding: 0
+
+  &__checkAll
+    padding-bottom: 40px
+    padding-top: 20px
+    +max(960)
+      padding: 0 0 40px
+
+  &__checkboxContainer > &__info, &__agreementCheckboxContainer > &__info
+    position: absolute
+    top: -33px
+    background: $pippin
+    padding: 5px 10px
+    border-radius: 4px
+    box-shadow: 0 3px 2px #00000026
+    left: 0
+    font-size: 16px
+    color: $torchRed
+    display: none
+    right: unset
+    +max(960)
+      width: 100%
+
+  &__checkboxContainer > &__info:after, &__agreementCheckboxContainer > &__info:after
+    content: ""
+    position: absolute
+    top: 50%
+    width: 16px
+    height: 16px
+    left: 11px
+    background-image: url('../../assets/images/arrowWarring.svg')
+    background-repeat: no-repeat
+    margin-top: 13px
+    z-index: 1
+    +max(960)
+      //right: auto
+      //left: 6px
+      top: -28px
+      transform: rotate(180deg)
+      right: auto
+      left: 15px
+
+  &__checkboxContainer > &__info:before, &__agreementCheckboxContainer > &__info:before
+    content: ""
+    background-image: none
+    visibility: hidden
+
+  &__employeeUpperText, &__silhouetteSmallText
+    span
+      color: $torchRed
+
+  &__agreementsOverlay, &__agreementsMobileOverlay
+    display: none
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,.6)
+    top: 0
+    z-index: 5
+    border-radius: 10px
+
+  &__agreementsContent
+    position: relative
+    margin: 20px
+    width: 100%
+    height: 100%
+
+  &__agreementsBox
+    width: 100%
+    height: 65%
+    background: white
+    border-radius: 10px
+    &:after
+      content: ''
+      width: 0
+      height: 0
+      border-left: 20px solid transparent
+      border-right: 20px solid transparent
+      border-top: 60px solid white
+      bottom: calc(35% - 60px)
+      position: absolute
+      right: 20%
+      +max(1600)
+        right: 10%
+      +max(1368)
+        right: 40%
+        border-top: 74px solid white
+        bottom: calc(40% - 100px)
+      +max(1312)
+        border-top: 88px solid white
+        bottom: calc(40% - 120px)
+      +max(1240)
+        right: 55%
+        bottom: calc(40% - 99px)
+      +max(1150)
+        right: 40%
+      +max(1100)
+        border-top: 57px solid white
+        right: 30%
+        bottom: calc(40% - 80px)
+      +max(980)
+        right: unset
+        left: 445px
+        border-left: 15px solid transparent
+        border-right: 15px solid transparent
+        border-top: 40px solid white
+        bottom: calc(40% - 55px)
+      +max(540)
+        left: unset
+        right: 10%
+        border-top: 45px solid white
+        bottom: calc(40% - 56px)
+      +max(450)
+        left: 30%
+        border-top: 55px solid white
+        bottom: calc(40% - 70px)
+      +max(362)
+        left: 50%
+        border-top: 70px solid white
+        bottom: calc(40% - 80px)
+
+  &__modalContainer
+    padding: 2rem
+    line-height: 175%
+    height: 100%
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    +max(980)
+      line-height: 250%
+    +max(600)
+      line-height: 175%
+
+  &__agreementUpperText
+    font-family: 'Lato', sans-serif
+    font-size: 2.6rem
+    font-weight: bold
+    margin-bottom: 2rem
+    color: #444444
+    line-height: 150%
+    +max(980)
+      font-size: 4rem
+    +max(600)
+      font-size: 2.6rem
+
+  &__agreementText
+    font-family: 'Lato', sans-serif
+    font-size: 1.9rem
+    color: #8D8D8D
+    flex: 1
+    +max(980)
+      font-size: 2.5rem
+    +max(600)
+      font-size: 1.9rem
+
+
+
+  &__modalCheckboxSpacer
+    flex-grow: 1
+    width: 100%
+
+  &__agreementButtonAndCheckbox
+    display: flex
+    align-items: center
+
+  &__agreementItem
+    width: 50%
+    height: 100%
+    display: flex
+    &:nth-of-type(1)
+      justify-content: flex-start
+    &:nth-of-type(2)
+      justify-content: flex-end
+
+  #closeModal
+    position: absolute
+    margin: 0
+    padding: 0
+    width: 45%
+    height: 9%
+
+  #closeMobileModal
+    margin-top: 0
+
+.-employee
+  padding-bottom: 20%
+  +max(980)
+    padding-bottom: 14%
+
+  .-fullWidth
+    width: 100%
+
+
+.-hiddenOnMobiles
+  +max(980)
+    display: none !important
+
+.-hiddenOnDesktops
+  +min(981)
+    display: none !important
+
+.silhouetteBox
+  width: 75% !important
+  +max(980)
+    width: 100% !important
+
+.firstStepErrors
+  +max(980)
+    left: 0
+  &:nth-of-type(2)
+    top: -35px
+    +max(980)
+      top: 50px

@@ -1,0 +1,337 @@
+.cvPanel
+  height: 100%
+  background-color: $mercury
+  font-family: 'Lato', sans-serif
+
+  &__backgroundImg
+    width: 100%
+    display: flex
+    justify-content: center
+    height: 705px
+    background-size: cover
+    background-position: top
+    background-attachment: fixed
+
+    +max(960)
+      height: 355px
+
+  &__contentBg
+    position: relative
+    width: 100%
+    background: $mercury
+    display: flex
+    justify-content: center
+    border-bottom: 47px solid $torchRed
+
+  &__content
+    margin-top: -350px
+    margin-bottom: 30px
+    height: auto
+    width: 70%
+    top: -400px
+    max-width: 1340px
+    display: flex
+    // margin-bottom: 30px
+
+    +max(960)
+      margin-top: -100px
+      width: 95%
+
+  &__require
+    color: $torchRed !important
+
+  &__wrapper
+    width: 100%
+    background: $white
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+  &__topbar
+    width: 85%
+
+  &__topbar
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 20px 0
+    +max(960)
+      flex-direction: column
+
+  &__button
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    text-decoration: none
+    color: $black
+    +max(960)
+      margin: 20px 0
+
+  &__button span
+    font-size: 16px
+    padding-left: 10px
+
+  &__arrow
+    position: absolute
+    top: 25px
+
+  &__main
+    width: 83%
+    +max(960)
+     width: 90%
+
+  &__title
+    padding: 10px 0
+
+  &__title span
+    font-size: 65px
+    color: $masala
+    +max(960)
+      font-size: 30px
+
+  &__paragraph
+    padding: 40px 0
+
+  &__paragraph span
+    font-size: 45px
+    color: $masala
+    +max(960)
+      font-size: 25px
+
+
+
+  &__item
+    padding: 10px 0
+    position: relative
+
+  &__item label
+    font-size: 28px
+    color: $masala
+
+    +max(960)
+      font-size: 16px
+  &__input
+    position: relative
+    padding: 5px 0 10px
+    width: 100%
+
+  &__inputField
+    font-family: inherit
+    width: 100%
+    border: 0
+    border-bottom: 2px solid $alto
+    outline: 0
+    font-size: 20px
+    color: $black
+    padding: 7px 0
+    background: transparent
+    transition: border-color 0.2s
+
+    +max(960)
+      font-size: 16px
+
+    &::placeholder
+     color: $alto
+     font-weight: 300
+
+    &:focus
+      padding-bottom: 6px
+      font-weight: 700
+      border-width: 3px
+      border-image: linear-gradient(to top, $black,$black)
+      border-image-slice: 1
+
+  &__textAreaField
+    @extend  .cvPanel__inputField
+    height: 150px
+    resize: none
+
+  &__tellUs
+    padding: 20px 0
+
+
+  &__tellUs span
+    font-size: 45px
+    color: $masala
+    +max(960)
+      font-size: 30px
+
+  &__privacyPolicy
+    padding: 20px 0
+
+  &__privacyPolicy span
+    font-size: 20px
+    color: $masala
+    text-align: justify
+    +max(960)
+      font-size: 16px
+
+  &__privacyPolicy span a
+    color: $torchRed
+
+  &__input > &__info
+    position: absolute
+    top: 0px
+    background: $pippin
+    padding: 5px 10px
+    border-radius: 4px
+    box-shadow: 0 3px 2px #00000026
+    right: 0
+    font-size: 16px
+    display: none
+    +max(960)
+      margin-top: 10px
+      top: 2px
+      position: relative
+      box-shadow: 0 -3px 2px #00000026
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      width: 16px
+      height: 16px
+      right: 15px
+      background-image: url('../../assets/images/arrowWarring.svg')
+      background-repeat: no-repeat
+      margin-top: 13px
+      z-index: 1
+      +max(960)
+        top: -28px
+        transform: rotate(180deg)
+        right: auto
+        left: 15px
+    span
+      color: $torchRed
+
+
+  &__checkboxContainer
+    display: block
+    position: relative
+    margin-bottom: 12px
+    padding: 7px 0 7px 70px
+    cursor: pointer
+    font-size: 20px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    color: $masala
+    +max(960)
+      font-size: 16px
+      padding: 5px 0 7px 40px
+
+  &__checkboxContainer &__checkboxInput
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+
+  &__checkmark
+    position: absolute
+    top: 0
+    left: 0
+    height: 38px
+    width: 38px
+    border: solid 3px $torchRed
+    border-radius: 5px
+    background-color: $white
+    +max(960)
+      height: 28px
+      width: 28px
+  &__checkmarkGray
+    @extend .cvPanel__checkmark
+    border: solid 3px $pumice
+
+  &__checkboxContainer:hover input ~ &__checkmark
+    background-color: $white
+
+  &__checkboxContainer input:checked ~ &__checkmark
+    background-color: $white
+
+  &__checkmark:after
+    content: ""
+    position: absolute
+    display: none
+
+  &__checkboxContainer input:checked ~ &__checkmark:after
+    display: block
+
+  &__checkboxContainer &__checkmark:after
+    left: 10px
+    top: 2px
+    width: 10px
+    height: 20px
+    border: solid $torchRed
+    border-width: 0 3px 3px 0
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+    +max(960)
+      width: 5px
+      height: 13px
+      left: 7px
+      top: 2px
+
+  &__checkboxPanel
+    padding-left: 50px
+    +max(960)
+      padding: 0
+
+  &__checkAll
+    padding-bottom: 40px
+    padding-top: 20px
+    +max(960)
+      padding: 0 0 40px
+
+  &__checkboxItem
+    padding-bottom: 25px
+
+  &__checkboxContainer > &__info
+    position: absolute
+    top: -33px
+    background: $pippin
+    padding: 5px 10px
+    border-radius: 4px
+    box-shadow: 0 3px 2px #00000026
+    left: 0
+    font-size: 16px
+    color: $torchRed
+    display: none
+    +max(960)
+      width: 100%
+
+  &__checkboxContainer > &__info:after
+    content: ""
+    position: absolute
+    top: 50%
+    width: 16px
+    height: 16px
+    left: 11px
+    background-image: url('../../assets/images/arrowWarring.svg')
+    background-repeat: no-repeat
+    margin-top: 13px
+    z-index: 1
+    +max(960)
+      right: auto
+      left: 6px
+
+  &__submitButton
+    display: flex
+    justify-content: flex-end
+    padding-bottom: 30px
+
+    button
+      +btn-red
+      font-weight: 300 !important
+
+#textarea_info
+  top: 110px
+  +max(960)
+    top: 0
+

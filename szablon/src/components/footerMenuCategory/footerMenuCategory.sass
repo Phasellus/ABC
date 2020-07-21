@@ -1,0 +1,64 @@
+.footerMenuCategory
+  +max(980)
+    padding: 15px 10px
+    border-bottom: 2px solid $boulder
+    cursor: pointer
+
+  &:last-child
+    +max(980)
+      border-bottom: none
+
+  &__titleBox
+    display: flex
+    align-items: center
+
+  &__titleBox i
+    display: none
+    margin-right: 10px
+    color: $white
+    font-size: 19px
+    +max(980)
+        display: block
+
+  &__titleBox p
+    font-family: 'Lato', sans-serif
+    color: $white
+    font-size: 16px
+    margin-bottom: 10px
+    font-weight: bold
+
+    +max(980)
+        margin: 0
+
+  &__titleBox a
+    font-family: 'Lato', sans-serif
+    color: $white
+    text-decoration: none
+    font-size: 16px
+    margin-bottom: 10px
+    font-weight: bold
+
+    +max(980)
+        margin: 0
+
+  &__menuCategoryItem
+    font-family: 'Lato', sans-serif
+    padding: 10px 0
+    font-size: 16px
+
+  &__menuCategoryItem a
+    color: $mercury
+    padding: 10px 0
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+  &__show
+    +max(980)
+      display: flex
+      flex-direction: column
+
+  &__secondLevelMenu
+    +max(980)
+      margin-left: 18px
+      display: none

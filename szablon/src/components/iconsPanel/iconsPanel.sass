@@ -1,0 +1,217 @@
+.iconsPanel
+  display: flex
+  justify-content: center
+  width: 100vw
+
+  =iconMixin
+    width: 50px
+    height: 50px
+    background-repeat: no-repeat
+    background-position: center
+    display: inline-block
+    background-size: contain
+
+  &__content
+    +container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 80px
+    padding-bottom: 80px
+
+    +max(980)
+      flex-direction: column
+
+  &__servicesPanel
+    font-size: 2em
+    font-family: 'Lato', sans-serif
+    font-weight: lighter
+    text-align: left
+    width: 100%
+
+  &__oneBox
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
+    width: 100%
+    +max(980)
+      flex-direction: column
+      align-items: center
+
+  &__whoWeRecruitTitle
+    //flex-basis: 33.33333%
+
+    +max(980)
+      margin-bottom: 50px
+      align-self: flex-start
+
+
+  &__whoWeRecruitBoxes
+    flex-basis: 33.33333%
+    +max(980)
+      flex-basis: 50%
+
+  &__asPartnerBox
+    padding: 2em 2em 2em 0
+    flex: 1
+    &:nth-of-type(1)
+      flex: 1.5
+    +max(980)
+      &:nth-of-type(1)
+        flex: unset
+      flex-basis: 50%
+      flex: unset
+      padding: 0 0 2em 0
+    +max(690)
+      flex-basis: 100%
+      flex: unset
+
+  &__listContainer
+    //padding-left: 70px
+    display: flex
+    flex-wrap: wrap
+    //padding-top: 20px
+
+  &__traitsBox
+    padding: 2em 2em 2em 0
+    flex-basis: 33.33333%
+    +max(980)
+      flex-basis: 50%
+    +max(690)
+      flex-basis: 100%
+
+
+  &__servicesBox
+    position: relative
+    flex-basis: 33.333%
+    padding: 1em
+    +max(980)
+      height: 150px
+      flex-basis: 50%
+    +max(690)
+      flex-basis: 100%
+
+  &__recruitmentBox
+    position: relative
+    display: flex
+    align-items: center
+    padding: 0 1em
+    height: auto
+    flex: 1
+    &:nth-of-type(1)
+      flex: .9
+    +max(500)
+      padding: 15px 0
+    +max(980)
+      &:nth-of-type(1)
+        flex: unset
+      height: 150px
+      flex-basis: 50%
+    +max(690)
+      flex-basis: 100%
+
+  &__traitIcon
+    +iconMixin
+    transform: translate(-10px, 20px)
+    margin-right: -10px
+
+  &__whoWeRecruitIcon
+    +iconMixin
+    height: 65px
+    width: 65px
+
+  &__whoWeRecruitBox
+    display: flex
+    justify-content: space-between
+    width: 71%
+    +max(980)
+      width: 100%
+    +max(500)
+      flex-direction: column
+      text-align: center
+
+  &__servicesIcon
+    +iconMixin
+    transform: translate(-15px, 50px)
+
+  &__asPartnerIcon
+    +iconMixin
+    transform: translate(-20px, 70px)
+    +max(980)
+      transform: translate(0, 70px)
+
+  &__traitName
+    margin-left: 10px
+    font-weight: bold
+    font-size: .75em
+
+  &__traitTextAbsolute
+    font-size: .75em
+    font-weight: 400
+    position: absolute
+    margin-top: 10px
+
+  &__traitText
+    font-size: .75em
+    font-weight: 400
+
+  a
+    cursor: pointer
+    margin-top: 10px
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+  &__headerText
+    font-weight: 400
+
+  &__backgroundColorDarkGray
+    background-color: #8D9CA2
+    width: 100%
+
+  &__labelBox
+    width: 100%
+    padding-left: 50px
+
+  &__asPartnerLabelBox
+    width: 100%
+    padding-left: 50px
+    +max(980)
+      padding-top: 20px
+      padding-left: 70px
+
+  &__whoWeRecruitLabelBox
+    width: 100%
+    margin-left: 20px
+
+  &__blurBackground
+    backdrop-filter: blur(50px) brightness(73%)
+    width: 100%
+
+  .-addMarginTop
+    margin-top: 1em
+
+  .-justifySpaceBetween
+    justify-content: space-between
+
+  .-decreaseMarginLeft
+    margin-left: -10px
+
+  .-whoWeRecruitText
+    font-size: 2em
+    font-family: 'Lato', sans-serif
+    font-weight: lighter
+
+  .-whoWeRecruitSecondBox
+    text-align: right
+    +max(690)
+      text-align: left
+
+  .-whoWeRecruitHeaderMargin
+    margin-top: 15px
+
+  .whoWeRecruitPadding
+      padding: 100px 0
+
+

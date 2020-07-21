@@ -1,0 +1,12 @@
+// 1 Variant
+- const imagesAsPartner = [ {img:"./assets/images/newsIcons/raising_consciousness.svg", text: 'Zwiększanie świadomości ekonomicznej i przekazywanie wiedzy o rynku pracy '},{img:"./assets/images/newsIcons/research.svg", text: 'Przeprowadzanie badań o rynku pracy we współpracy z uznanymi instytucjami'}, {img:"./assets/images/newsIcons/coop.svg", text: 'Współpraca z liderami opinii na rynku pracy '}]
+.iconsPanel.textWhite(style="background-image: url('./assets/images/blur_mock.jpg')").blur
+  .iconsPanel__content
+    .iconsPanel__servicesPanel
+      h1.iconsPanel__headerText Nasze cele to:
+      .iconsPanel__listContainer
+         each val in imagesAsPartner
+           .iconsPanel__traitsBox
+             div(style=`background-image: url("${val.img}");`).iconsPanel__asPartnerIcon
+             .iconsPanel__labelBox
+               span.iconsPanel__traitText.-normalFontWeight=val.text

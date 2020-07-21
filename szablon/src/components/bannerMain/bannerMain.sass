@@ -1,0 +1,96 @@
+.bannerMain
+  width: 100%
+  display: flex
+  justify-content: center
+  position: fixed
+  background-size: cover
+  background-position: center
+  +max(890)
+    height: 355px
+
+  &__content
+    +container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    +max(980)
+      flex-direction: column
+      height: 335px
+
+  .-employeeResponsive
+    +max(1230)
+      //width: 100% !important
+
+  &__leftBox
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 50%
+    height: 100%
+    text-shadow: 0 0 7px #000000
+    position: relative
+
+    +max(980)
+      align-items: center
+      width: 100%
+
+  &__photo
+    max-width: 100%
+
+  &__name
+    margin-top: 26px
+    font-family: 'Lato', sans-serif
+    font-size: 28px
+
+  &__rightBox
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    width: 50%
+
+    +max(980)
+      width: 100%
+      align-items: center
+
+  &__logo
+    margin-bottom: 50px
+
+  &__slogan
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+    font-family: 'Lato', sans-serif
+    font-size: 3.5rem
+    font-weight: bold
+    & > span
+      font-size: 6rem
+
+
+
+  &__image
+    height: 100%
+    width: 100%
+    background-size: cover
+    position: absolute
+    background-position: center
+    +max(980)
+      height: 375px
+
+
+  &__text
+    font-family: 'Lato', sans-serif
+    font-size: 20px
+
+    +max(980)
+      text-align: center
+
+  &__formBoxContainer
+    margin-top: -30px
+    backdrop-filter: blur(50px)
+
+  .-noShadow
+    color: #fff
+    text-shadow: none

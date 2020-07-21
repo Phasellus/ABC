@@ -1,0 +1,25 @@
+.recruitmentReqItem
+  display: flex
+  align-items: center
+  padding: 5px 0
+  justify-content: center
+  flex: 0 50%
+
+  +max(980)
+    align-items: center
+    flex-direction: column
+    padding: 10px
+    text-align: center
+
+  & p
+    font-family: 'Lato', sans-serif
+    font-size: 20px
+    padding-left: 20px
+
+    +max(980)
+      padding: 0
+
+  &__image
+    display: block
+    width: 42px
+    height: auto

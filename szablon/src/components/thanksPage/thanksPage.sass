@@ -1,0 +1,75 @@
+.thanksPage
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 250px
+    padding-bottom: 100px
+    background-position: center
+    background-size: cover
+
+    &__content
+        +container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: $white
+        padding: 40px 0
+
+        +max(981)
+            flex-direction: column
+
+    &__leftColumn
+        width: 50%
+
+        +max(981)
+            width: 100%
+            margin-bottom: 40px
+
+    &__rightColumn
+        display: flex
+        flex-direction: column
+        width: 50%
+        align-items: flex-start
+
+        +max(981)
+            width: 100%
+            align-items: center
+
+    &__title
+        position: relative
+        width: 70%
+        font-family: 'Lato', sans-serif
+        font-size: 48px
+        color: $masala
+        z-index: 2
+        margin-bottom: 30px
+
+        +max(981)
+            width: 90%
+
+        +max(500)
+            text-align: center
+
+    &__titleImage
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 1
+        width: 50px
+        height: 50px
+
+    &__text
+        width: 70%
+        font-family: 'Lato', sans-serif
+        font-size: 24px
+        color: $masala
+        margin-bottom: 30px
+
+        +max(981)
+            width: 90%
+
+        +max(500)
+            text-align: center
+
+    &__button
+        +btn-red

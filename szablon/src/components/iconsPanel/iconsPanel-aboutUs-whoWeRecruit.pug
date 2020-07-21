@@ -1,0 +1,15 @@
+- const imagesCraft = [{img:"./assets/images/aboutUs/icon_wrench.svg", label: 'Pracowników z zagranicy'}, {img:"./assets/images/aboutUs/icon_worker.svg", label: 'Specjalistów z Polski'}]
+.iconsPanel.textDark.shadow.whoWeRecruitPadding(style="background-image: url('./assets/images/onas_blur.jpg')").blur
+  .iconsPanel__content.-whoWeRecruitText
+    .iconsPanel__oneBox.-justifySpaceBetween
+      .iconsPanel__whoWeRecruitTitle
+        h1.iconsPanel__headerText
+          |  Kogo rekrutujemy
+      .iconsPanel__whoWeRecruitBox
+        each val in imagesCraft
+          .iconsPanel__recruitmentBox
+            div(style=`background-image: url("${val.img}");`).iconsPanel__whoWeRecruitIcon
+            .iconsPanel__whoWeRecruitLabelBox
+              span.-normalFontWeight=val.label
+
+

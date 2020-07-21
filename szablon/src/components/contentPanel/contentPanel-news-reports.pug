@@ -1,0 +1,16 @@
+- const downloadLinks = [{link: 'Barometr Imigracji Zarobkowej - II półrocze 2019', text: 'Barometr Imigracji Zarobkowej_IIH2019.pdf (8,83 MB)'}, {link: 'Barometr Imigracji Zarobkowej - II półrocze 2018', text: 'Barometr Imigracji Zarobkowej - II półrocze 2018.pdf (8,94 MB)'},{link: 'Barometr Imigracji Zarobkowej - I półrocze 2018', text: 'Barometr Imigracji Zarobkowej - I półrocze 2018.pdf (8,91 MB)'}, {link: 'Barometr Imigracji Zarobkowej - I półrocze 2018', text: 'Barometr Imigracji Zarobkowej - I półrocze 2018.pdf (8,91 MB)'}]
+.contentPanel.bgWhite.textDark
+  .contentPanel__content
+    .contentPanel__leftBox
+      img.contentPanel__photo(src="./assets/images/investor/investor_cloud.jpg")
+    .contentPanel__rightBox
+      img(src="./assets/images/investor/person_one.jpg" style="left: 0; top: -10%;").contentPanel__oneManSmallPicture
+      img(src="./assets/images/investor/persons_two.jpg" style="top: -10%").contentPanel__twoMenSmallPicture
+      h1.contentPanel__textHeader Pobierz nasze raporty <br><br>
+      each val in downloadLinks
+        .contentPanel__downloadLinkBox
+          div(style="background-image: url('./assets/images/pdf_icon.svg')").contentPanel__downloadIcon
+          .contentPanel__downloadLinkContent
+            a(href="/").-colorRed=val.link
+            br
+            =val.text

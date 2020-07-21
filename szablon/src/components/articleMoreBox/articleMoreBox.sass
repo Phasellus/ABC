@@ -1,0 +1,32 @@
+.articleMoreBox
+    display: flex
+    justify-content: center
+    background-color: $mercury
+    padding-top: 66px
+    padding-bottom: 120px
+
+    +max(981)
+        padding-top: 40px
+        padding-bottom: 60px
+
+    &__content
+        +container
+        display: flex
+        flex-direction: column
+
+    &__title
+        margin-bottom: 46px
+        font-family: 'Lato', sans-serif
+        font-size: 32px
+        font-weight: 700
+        color: $masala 
+        +max(981)
+            text-align: center
+    
+    &__itemBox
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+        +max(981)
+            flex-direction: column

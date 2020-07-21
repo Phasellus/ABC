@@ -1,0 +1,25 @@
+- const pdfDownloads = [{ link: '/', label: 'Barometr Imigracji Zarobkowej - II półrocze 2019', text: 'Barometr Imigracji Zarobkowej_IIH2019.pdf (8,83 MB)' }, { link: '/', label: 'Barometr Imigracji Zarobkowej - II półrocze 2018', text: 'Barometr Imigracji Zarobkowej - II półrocze 2018.pdf (8,94 MB)' }]
+.contentPanel.bgWhite.textDark
+  .contentPanel__content
+    .contentPanel__leftBox
+      img.contentPanel__photo(src="assets/images/employeePage/megaphone2.jpg")
+    .contentPanel__rightBox
+      img(src="assets/images/employeePage/tinyPeople-employee-jobMarketNews.jpg").contentPanel__tinyPeopleImage
+      h1.contentPanel__textHeader Aktualności <br> z rynku pracy
+      br
+      br
+      .contentPanel__text W naszym dziale Aktualności znajdziesz najważniejsze informacje o rynku pracy: analizy, badania, ale też porady jak znaleźć wymarzoną pracę i realizować zawodowe marzenia.
+        |
+        br
+        br
+        strong
+          h1 Zapoznaj się z naszymi raportami:
+        br
+        |
+      each val in pdfDownloads
+        div.contentPanel__downloadLinkBox
+          div(style="background-image: url('./assets/images/pdf_icon.svg')").contentPanel__downloadIcon
+          .contentPanel__downloadLinkContent
+            a(href=val.link).-colorRed=val.label
+            br
+            =val.text

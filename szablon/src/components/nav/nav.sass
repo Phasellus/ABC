@@ -1,0 +1,118 @@
+.nav
+  position: relative
+  display: block
+  top: 50%
+  width: 90%
+  transform: translateY(-50%)
+
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+  &__item
+    width: auto
+    padding: 0 40px 0 0
+
+    +max(1600)
+      padding: 0 20px 0 0
+
+    +max(1305)
+      padding: 0 10px 0 0
+
+  &__subList
+    position: absolute
+    bottom: 10px
+    display: flex
+    width: 100%
+    left: 0
+    //
+    //+max(1050)
+    //  bottom: -55px
+
+  &__subItem
+    position: relative
+    padding: 0 30px 0 0
+
+    &::after
+      position: absolute
+      display: inline
+      top: 50%
+      right: 15px
+      width: 1px
+      height: 80%
+      transform: translateY(-50%)
+      background-color: #444
+      content: ""
+
+    &:last-of-type
+      &::after
+        display: none
+
+  &__link
+    +font-lato
+    position: relative
+    transition: .2s
+    color: #444
+    font-weight: 400
+    text-decoration: none
+
+    &.-active
+      color: $torchRed
+      font-weight: 500
+
+      &::after
+        position: absolute
+        display: block
+        bottom: -5px
+        left: 0
+        width: 100%
+        height: 3px
+        background-color: $torchRed
+        content: ""
+
+    &:hover
+      color: $torchRed
+
+      &::after
+        position: absolute
+        display: block
+        bottom: -5px
+        left: 0
+        width: 100%
+        height: 3px
+        background-color: $torchRed
+        content: ""
+
+    &.-no-touch
+      color: $black
+      pointer-events: none
+      &:hover
+       color: $black
+
+    +max(1180)
+      font-size: 12px
+
+    .nav__subItem &
+      font-size: 12px
+
+      &:hover
+        color: $torchRed
+        &.-no-touch
+          color: $black
+
+        &::after
+          display: none
+
+      +max(1180)
+        font-size: 10px
+
+    .nav__subItem.-active &
+      color: $torchRed
+
+
+.nav__link.-active.-no-touch::after
+  background-color: transparent
+
+.nav__link.-active.-no-touch
+  color: $torchRed

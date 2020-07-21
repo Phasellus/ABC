@@ -1,0 +1,40 @@
+.worksTimeLine
+  display: block
+  width: 100%
+  background-repeat: no-repeat
+  background-size: cover
+
+  &__container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    max-width: 100%
+    max-height: 596px
+    +min(982)
+      align-items: flex-end
+      padding: 60px
+    +min(1980)
+      align-items: center
+
+    +max(981)
+      overflow-x: auto
+
+  &__timelineImage
+    width: 87%
+    max-width: 1600px
+    height: auto
+
+  &__timeline
+    width: 100%
+    max-height: 596px
+
+    +max(1930)
+      background-size: 87% auto
+
+
+    +max(981)
+      width: 1354px
+      background-image: url('../../assets/worksTimeLine/workstimeline-mobile.png')
+      background-size: 1354px auto
+      background-position: center left

@@ -1,0 +1,47 @@
+.bannerFormBox
+  .bannerFormBox__content
+    .bannerFormBox__upperText
+      p
+        |
+        span.-redText Twój&nbsp
+        | przyszły&nbsp;
+        |
+        span.-redText pracownik jest tutaj.&nbsp;
+        |
+        | Zbuduj z nami swój zespół.&nbsp;
+        |
+        span.-redText  Powiedz nam kogo szukasz.
+    form(action='#' name="selectSpecializationMobile" id="selectSpecializationMobile")
+      .bannerFormBox__inputSection
+        .bannerFormBox__item
+          input(placeholder="Wpisz specjalizację" value='' name='specialization').bannerFormBox__boxInput
+          .bannerFormBox__info.firstStepErrors
+            span Pole wymagane
+        .bannerFormBox__item
+          select(id='select' name='selectTrade')
+            option(default) Wybierz branżę
+            option(value="1") Przemysł
+            option(value="2") Budownictwo
+            option(value="3") Rolnictwo
+            option(value="4") Transport
+            option(value="5") RTV/AGD
+            option(value="6") Handel
+            option(value="7") IT
+            option(value="8") Administracja
+            option(value="9") Ochrona zdrowia i opieka społeczna
+            option(value="10") Turystyka
+            option(value="11") Logistyka
+            option(value="12") HoReCa
+            option(value="13") Administracja
+            option(value="14") Finanse i ubezpieczenia
+            option(value="15") Inne
+          .bannerFormBox__info.firstStepErrors
+            span Pole wymagane
+      .bannerFormBox__smallText Wybierz liczbę poszukiwanych pracowników
+      .bannerFormBox__sliderBox
+        .bannerFormBox__sliderElementNarrow.-imagePeople
+        .bannerFormBox__sliderElementWide
+          input(type='range' min='1' max='1500' name="employeeCount")#sliderMobile.bannerFormBox__slider
+        .bannerFormBox__sliderElementNarrow.-sliderText
+          h1#employeesCountMobile 750
+      button.bannerFormBox__buttonRed szukaj

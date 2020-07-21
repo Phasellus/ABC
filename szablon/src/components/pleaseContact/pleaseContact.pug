@@ -1,0 +1,111 @@
+.pleaseContact.bgDarkGray.shadow.textWhite
+  .pleaseContact__content
+    .pleaseContact__wrapper
+      .pleaseContact__main
+        .pleaseContact__title
+          span
+            | Zapraszamy
+            br
+            | do kontaktu
+        .pleaseContact__details
+          .pleaseContact__selectBox
+            select.pleaseContact_select
+              each variable in [{id:0,var_name:'Dział sprzedaży'},{id:1,var_name:'Dział rekrutacji'},{id:2,var_name:'Dział rekrutacji specjalistów i kadry zarządzającej z Polski'},{id:3,var_name:'Biuro i administracja'}]
+                option(value=variable.id) #{variable.var_name}
+          .pleaseContact__info
+            .pleaseContact__text
+              .pleaseContact__separated
+                .pleaseContact__item
+                  .pleaseContact__icon
+                    img(
+                      src="./assets/images/pin.svg"
+                      alt="pin"
+                    )
+                  span Dział sprzedaży
+                .pleaseContact__arrow
+                  img(src="./assets/images/separatorArrow.png")
+              .pleaseContact__separated
+                .pleaseContact__item
+                  .pleaseContact__icon
+                    img(
+                      src="./assets/images/pin.svg"
+                      alt="pin"
+                    )
+                  span Dział rekrutacji
+                .pleaseContact__arrow
+                  img(src="./assets/images/separatorArrow.png")
+              .pleaseContact__separated
+                .pleaseContact__item
+                  .pleaseContact__icon
+                    img(
+                      src="./assets/images/pin.svg"
+                      alt="pin"
+                    )
+                  span Dział rekrutacji specjalistów i kadry zarządzającej z Polski
+                .pleaseContact__arrow
+                  img(src="./assets/images/separatorArrow.png")
+              .pleaseContact__separated
+                .pleaseContact__item
+                  .pleaseContact__icon
+                    img(
+                      src="./assets/images/pin.svg"
+                      alt="pin"
+                    )
+                  span Biuro i administracja
+                .pleaseContact__arrow
+                  img(src="./assets/images/separatorArrow.png")
+          .pleaseContact__contactInfo
+            .pleaseContact__contactWrapper
+              .pleaseContact__worker
+                .pleaseContact__avatar
+                  img(
+                    src="./assets/images/avatar.png"
+                    alt="avatar"
+                  )
+                .pleaseContact__workerInfo
+                  span Kinga Marczak
+                  span Nazwa stanowiska
+              .pleaseContact__phone
+                .pleaseContact__phone__icon
+                  img(
+                    src="./assets/images/telephone.svg"
+                    alt="avatar"
+                      )
+                .pleaseContact__phoneNumber
+                  span +48 71 757 22 08
+              .pleaseContact__email
+                .pleaseContact__email__icon
+                  img(
+                    src="./assets/images/airplane.svg"
+                    alt="avatar"
+                    )
+                .pleaseContact__emailAddress
+                  span biuro@personnelservice.pl
+            .pleaseContact__contactWrapper
+              .pleaseContact__worker
+                .pleaseContact__avatar
+                  img(
+                    src="./assets/images/avatar.png"
+                    alt="avatar"
+                  )
+                .pleaseContact__workerInfo
+                  span Jan Kolwaski
+                  span Nazwa stanowiska
+              .pleaseContact__phone
+                .pleaseContact__phone__icon
+                  img(
+                    src="./assets/images/telephone.svg"
+                    alt="avatar"
+                      )
+                .pleaseContact__phoneNumber
+                  span +48 43 234 23 43
+              .pleaseContact__email
+                .pleaseContact__email__icon
+                  img(
+                    src="./assets/images/airplane.svg"
+                    alt="avatar"
+                    )
+                .pleaseContact__emailAddress
+                  span asdasdadsasdasdasd@personnelservice.pl
+
+

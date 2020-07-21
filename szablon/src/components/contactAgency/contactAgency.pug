@@ -1,0 +1,136 @@
+.contactAgency.bgRed.shadow.textWhite
+  .contactAgency__content
+    .contactAgency__wrapper
+      .contactAgency__main
+        .contactAgency__map
+          .contactAgency__desktopMap
+            include ../../assets/images/mapa.svg
+        .contactAgency__details
+          .contactAgency__title
+            span Biura Personnel Service na świecie
+          .contactAgency__merge
+            .contactAgency__selectBox
+              select.contactAgency__select
+                each variable in [{id:0,var_name:'Polska'},{id:1,var_name:'Ukraina'},{id:2,var_name:'Niemcy'},{id:3,var_name:'Węgry'},{id:4,var_name:'Czechy'}]
+                  option.contactAgency__select_option(value=variable.id) #{variable.var_name}
+            .contactAgency__info
+              .contactAgency__text
+                .contactAgency__separated
+                  .contactAgency__item
+                    .contactAgency__icon
+                      img(
+                      src="./assets/images/icoGlobe.png"
+                      alt="pin"
+                      )
+                    span Polska
+                  .contactAgency__arrow
+                    img(src="./assets/images/separatorArrowRed.png")
+                .contactAgency__separated
+                  .contactAgency__item
+                    .contactAgency__icon
+                      img(
+                      src="./assets/images/icoGlobe.png"
+                      alt="pin"
+                      )
+                    span Ukraina
+                  .contactAgency__arrow
+                    img(src="./assets/images/separatorArrowRed.png")
+                .contactAgency__separated
+                  .contactAgency__item
+                    .contactAgency__icon
+                      img(
+                        src="./assets/images/icoGlobe.png"
+                        alt="pin"
+                        )
+                    span Niemcy
+                  .contactAgency__arrow
+                    img(src="./assets/images/separatorArrowRed.png")
+                .contactAgency__separated
+                  .contactAgency__item
+                    .contactAgency__icon
+                      img(
+                        src="./assets/images/icoGlobe.png"
+                        alt="pin"
+                        )
+                    span Węgry
+                  .contactAgency__arrow
+                    img(src="./assets/images/separatorArrowRed.png")
+                .contactAgency__separated
+                  .contactAgency__item
+                    .contactAgency__icon
+                      img(
+                        src="./assets/images/icoGlobe.png"
+                        alt="pin"
+                        )
+                    span Czechy
+                  .contactAgency__arrow
+                    img(src="./assets/images/separatorArrowRed.png")
+            .contactAgency__contactInfo
+              .contactAgency__contactWrapper
+                .contactAgency__worker
+                  .contactAgency__avatar
+                    img(
+                      src="./assets/images/pointOnMap.png"
+                      alt="avatar"
+                    )
+                  .contactAgency__workerInfo
+                    span
+                      | SkyTower,
+                      br
+                      | ul. Gwiaździsta 66 lokal 2B.06,
+                      br
+                      | 53-413 Wrocław,
+                      br
+                      | Polska
+
+                .contactAgency__phone
+                  .contactAgency__phone__icon
+                    img(
+                      src="./assets/images/icoCall.png"
+                      alt="avatar"
+                        )
+                  .contactAgency__phoneNumber
+                    a(href="tel:+48717572208") +48 71 757 22 08
+                .contactAgency__email
+                  .contactAgency__email__icon
+                    img(
+                      src="./assets/images/airplane.svg"
+                      alt="avatar"
+                      )
+                  .contactAgency__emailAddress
+                    a(href="mailto:biuro@personnelservice.pl").negativeHover biuro@personnelservice.pl
+              .contactAgency__contactWrapper
+                .contactAgency__worker
+                  .contactAgency__avatar
+                    img(
+                      src="./assets/images/pointOnMap.png"
+                      alt="avatar"
+                    )
+                  .contactAgency__workerInfo
+                    span
+                      | XYZ,
+                      br
+                      | ul. XYZ XYZ lokal XYZ,
+                      br
+                      | 11-111 Lwów,
+                      br
+                      | Ukraina
+
+                .contactAgency__phone
+                  .contactAgency__phone__icon
+                    img(
+                      src="./assets/images/icoCall.png"
+                      alt="avatar"
+                        )
+                  .contactAgency__phoneNumber
+                    span +48 11 111 11 11
+                .contactAgency__email
+                  .contactAgency__email__icon
+                    img(
+                      src="./assets/images/airplane.svg"
+                      alt="avatar"
+                      )
+                  .contactAgency__emailAddress
+                    span asdasdasdasdasdasdasd@personnelservice.pl
+
+

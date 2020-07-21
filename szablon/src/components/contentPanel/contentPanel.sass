@@ -1,0 +1,365 @@
+.contentPanel
+  display: flex
+  justify-content: center
+  width: 100vw
+  background-size: cover
+  background-repeat: no-repeat
+
+
+  &__content
+    +container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 65px
+    padding-bottom: 65px
+
+    +max(980)
+      flex-direction: column
+
+
+  &__leftBox
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 50%
+
+    +max(980)
+      align-items: center
+      width: 100%
+      margin-bottom: 40px
+
+  &__oneBox
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    width: 100%
+    flex-wrap: wrap
+
+  &__photo
+    max-width: 100%
+
+  &__name
+    margin-top: 26px
+    font-family: 'Lato', sans-serif
+    font-size: 28px
+    z-index: 5
+
+  &__rightBox
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-around
+    position: relative
+    width: 60%
+
+    +max(980)
+      width: 100%
+      align-items: center
+
+  &__logo
+    margin-bottom: 50px
+
+  &__text
+    font-family: 'Lato', sans-serif
+    font-size: 1.7em
+    z-index: 2
+    line-height: 1.25em
+
+
+  &__textHeader
+    font-family: 'Lato', sans-serif
+    font-size: 3em
+    font-weight: bold
+    width: 100%
+    z-index: 2
+    //+max(980)
+    //  text-align: center
+
+    &-marginBottom
+      margin-bottom: 200px
+
+  &__buttonRed
+    @include btn-red
+
+  &__servicesPanel
+    color: white
+    font-size: 28px
+    font-family: 'Lato', sans-serif
+    font-weight: lighter
+    text-align: left
+    width: 100%
+
+  &__listContainer
+    //padding-left: 70px
+    display: flex
+    flex-wrap: wrap
+    padding-top: 20px
+
+  &__servicesList
+    columns: 3
+    +max(1235)
+      columns: 2
+
+    & > li
+      margin: 10px 0
+
+    & > li > span
+      position: relative
+      left: 10px
+      bottom: 10px
+      +max(1480)
+        font-size: 25px
+      +max(1340)
+        font-size: 22px
+        bottom: 15px
+      +max(1235)
+        font-size: 20px
+
+  &__servicesCaptionLink
+    text-decoration: underline
+
+  &__servicesListMobile
+    display: flex
+    flex-wrap: wrap
+
+  &__mobileServicesWrapper
+    margin: 20px 0
+    +max(720)
+      font-size: 20px
+    +max(580)
+      font-size: 18px
+
+  &__imageDivMobile
+    padding: 30px
+    width: 100%
+    background-repeat: no-repeat
+    background-position: center
+
+  &__chairManName
+    font-family: 'Lato', sans-serif
+    font-size: 2em
+    margin: 10px 0
+
+  &__chairManFunction
+    font-family: 'Lato', sans-serif
+    font-size: 1.5em
+
+  &__chairManBox
+    padding: 0 20px
+    width: 100%
+    +max(555)
+      margin: 20px 0
+      text-align: center
+
+  &__oneManSmallPicture
+    position: absolute
+    right: 45%
+    top: 0
+
+  &__twoMenSmallPicture
+    position: absolute
+    right: 0
+    top: 0
+
+  &__employeeSmallPictureSecond
+    position: absolute
+    right: -10%
+    bottom: 20%
+
+  &__employeeSmallPicture
+    position: absolute
+    bottom: 62%
+    left: -7%
+
+  &__whoWeRecruitTitle
+    flex-basis: 33.33333%
+    text-align: right
+    transform: translateY(50px)
+    +max(980)
+      flex-basis: 100%
+      margin-bottom: 50px
+      transform: translateY(0px)
+
+  &__whoWeRecruitBoxes
+    flex-basis: 33.33333%
+    +max(980)
+      flex-basis: 50%
+
+  &__traitsBox
+    flex-basis: 33.33333%
+    padding: 2em 2em 2em 0
+    +max(980)
+      flex-basis: 50%
+    +max(690)
+      flex-basis: 100%
+
+  &__traitIcon
+    transform: translate(-10px, 20px)
+    width: 50px
+    height: 50px
+    background-repeat: no-repeat
+    background-position: center
+    display: inline-block
+    margin-right: -10px
+
+  &__traitName
+    margin-left: 10px
+    font-weight: bold
+    font-size: .8em
+
+  &__traitText
+    font-size: .8em
+
+  &__downloadLinkBox
+    width: 100%
+    display: flex
+    font-family: 'Lato', sans-serif
+    font-size: 1.4em
+    padding: 10px 0
+    z-index: 2
+
+  &__downloadIcon
+    width: 2.7em
+    height: 2.7em
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    display: inline-block
+
+
+  &__downloadLinkContent
+    width: 100%
+    display: inline-block
+    padding-top: .7em
+    padding-left: 1.5em
+    line-height: 30px
+
+  &__whoWeRecruitIcon
+    transform: translate(-20px, 15px)
+
+  &__servicesList
+    list-style-type: disc
+    columns: 1
+    margin: .9em 0 .9em 1.1em
+
+  &__tinyPeopleImage
+    position: absolute
+    max-width: 100%
+    max-height: 100%
+    top: 0
+    right: 0
+
+    .-directionRowReverse > .contentPanel__rightBox > &
+      right: unset
+      left: 0
+
+  &__specialistFromPolandButtonBox
+    +max(980)
+      margin-left: 5em
+
+  .-employeePolandButton
+    +max(980)
+      margin-bottom: .1em
+      display: block
+    & > p
+      text-align: right
+      display: inline-block
+      +max(890)
+        margin-top: 15px
+        float: right
+        margin-left: 50%
+
+  .additionalButtonInfo
+    display: inline-block
+    +max(890)
+      text-align: right
+      margin-top: 10px
+      width: 100%
+
+  .-employeePolandText
+    +max(980)
+      margin-left: 1em
+
+  .-textCentered
+    text-align: center
+
+  .-textAlignLeft
+    text-align: left
+
+  .-textAlignRight
+    text-align: right
+
+  .-directionRow
+    flex-direction: row
+    +max(555)
+      flex-direction: column
+
+  .-colorRed
+    color: $torchRed
+
+  .-fontSizeInherit
+    font-size: inherit !important
+
+  .-colorInherit
+    color: inherit
+
+  .-relative
+    position: relative
+
+  .-justifySpaceBetween
+    justify-content: space-between
+
+  .-directionRowReverse
+    flex-direction: row-reverse
+    +max(980)
+      flex-direction: column
+
+  .-hiddenOnMobiles
+    +max(980)
+      display: none
+
+  .-bold
+    font-weight: bold
+
+  .-smallerText
+    margin-top: 10px
+    font-size: .7em
+
+  .-boxShadow
+    box-shadow: inset 0 10px 50px rgba(0, 0, 0, 0.16)
+
+  .-zIndexTop
+    z-index: 5
+
+  .-alignFlexStart
+    align-items: flex-start
+
+  .-addMarginTop
+    margin-top: 1em
+
+  .-addPadding
+    padding: 30px 0 80px 0
+
+  .-staffSmallerText
+    font-size: 1.4em
+    bottom: 0
+    +min(981)
+      position: absolute
+
+  .-stretch
+    align-items: stretch
+
+  .-positionRelative
+    position: relative
+
+  .-bigTextStaff
+    bottom: 50%
+    +min(981)
+      position: absolute
+    +max(980)
+      margin-bottom: .8em
+
+  .-marginsDesktopBigText
+    +min(981)
+      margin-top: 1.5em

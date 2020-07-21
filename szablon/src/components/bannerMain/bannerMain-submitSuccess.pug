@@ -1,0 +1,14 @@
+.bannerMain.withBannerBox.textWhite
+  .bannerMain__image(style=`background-image:url('./assets/images/fota_glowna.png');`)
+  .bannerMain__content
+    .bannerMain__leftBox
+      .bannerMain__slogan
+        | Personnel Service <br>
+        span Lider zatrudnienia i rozwiązań HR
+    .bannerMain__rightBox.-hiddenOnMobiles
+      include ../bannerFormBox/bannerFormBox-completed
+.positionRelative.responsiveMargins
+.-hiddenOnDesktops
+  .bannerMain__rightBox
+    include ../bannerFormBox/bannerFormBox-completed
+

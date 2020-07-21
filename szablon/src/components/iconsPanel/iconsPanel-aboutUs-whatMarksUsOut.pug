@@ -1,0 +1,13 @@
+// 1 Variant
+- const images = [{img:"./assets/images/aboutUs/icons/experience.svg", label: 'Doświadczenie', text: 'Działamy na rynku od dekady. W każdym roku realizujemy projekty dla ok. 100 firm gównie na poziomie enterprise.'}, {img: "./assets/images/aboutUs/icons/responsibility.svg", label: 'Odpowiedzialność', text: 'Do obsługi operacyjnej projektów delegujemy ekspertów w dziedzinie zatrudnienia obcokrajowców, którzy mówią w języku, którego wymaga projekt.'}, {img:"./assets/images/aboutUs/icons/elasticity.svg", label: 'Elastyczność', text: 'Zawsze dostosowujemy się do Twoich wymagań, zapewniając odpowiednią liczbę pracowników o wymaganych kwalifikacjach i reagując na potrzeby zmieniające się w czasie. '}, {img:"./assets/images/aboutUs/icons/effectiveness.svg", label: 'Skuteczność', text: 'Posiadamy własne struktury rekrutacyjne w kilku krajach i Dział Legalizacji, dlatego nie jesteśmy uzależnieni od zewnętrznych dostawców i szybko legalizujemy pracę osób z zagranicy.'}, {img:"./assets/images/aboutUs/icons/complexity.svg", label: 'Kompleksowość', text: 'Otrzymasz od nas pełną obsługę operacyjną od legalizacji pobytu, szkoleń, badań profilaktycznych, nostryfikacji uprawnień, tłumaczenia dokumentów, organizacji kwater, po dojazdy pracowników do miejsca pracy.'}, {img:"./assets/images/aboutUs/icons/expertise.svg", label: 'Eksperckość', text: 'Stale monitorujemy rynek pracy, wskaźniki dotyczące naszych pracowników oraz zadowolenie klientów. Prowadzimy i cyklicznie publikujemy obiektywne badania rynku pracy w Polsce i na Ukrainie. '}]
+.iconsPanel.textWhite.bgDarkGray
+  .iconsPanel__content
+    .iconsPanel__servicesPanel
+      h1.iconsPanel__headerText Co nasz wyróżnia?
+      .iconsPanel__listContainer
+        each val in images
+          .iconsPanel__traitsBox
+            div(style=`background-image: url("${val.img}");`).iconsPanel__traitIcon
+            span.iconsPanel__traitName=val.label
+            .iconsPanel__labelBox.-addMarginTop
+              span.iconsPanel__traitText.-normalFontWeight=val.text

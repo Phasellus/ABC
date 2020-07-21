@@ -1,0 +1,23 @@
+- const downloadLinks = [{label: 'Barometr Imigracji Zarobkowej - II półrocze 2019', text: 'Barometr Imigracji Zarobkowej_IIH2019.pdf (8,83 MB)', link: '/' }, {label: 'Barometr Imigracji Zarobkowej - II półrocze 2018', text: 'Barometr Imigracji Zarobkowej - II półrocze 2018.pdf (8,94 MB)', link: '/' },{label: 'Barometr Imigracji Zarobkowej - I półrocze 2018', text: 'Barometr Imigracji Zarobkowej - I półrocze 2018.pdf (8,91 MB)', link: '/' }, {label: 'Barometr Imigracji Zarobkowej - I półrocze 2018', text: 'Barometr Imigracji Zarobkowej - I półrocze 2018.pdf (8,91 MB)', link: '/' }]
+.contentPanel.bgWhite.textDark
+  .contentPanel__content.-alignFlexStart
+    .contentPanel__leftBox
+      h1.contentPanel__textHeader.-addMarginTop Potęga wiedzy!
+
+    .contentPanel__rightBox
+      .contentPanel__text Wyznaczamy trendy i odważnie komentujemy rynek pracy – zawsze opierając się na faktach.
+        br
+        br
+        span.-smallerText W Personnel Service wierzymy w siłę badań. Znamy potrzeby firm w Polsce, analizujemy oczekiwania pracowników i zestawiamy te perspektywy ze sobą. Wychodzimy też poza Polskę: badania prowadzimy również na Ukrainie.
+        br
+        br
+        span.-bold Zapoznaj się z naszymi raportami:
+        br
+        br
+      each val in downloadLinks
+        .contentPanel__downloadLinkBox
+          div(style="background-image: url('./assets/images/pdf_icon.svg')").contentPanel__downloadIcon
+          .contentPanel__downloadLinkContent
+            a(href=val.link).-colorRed=val.label
+            br
+            =val.text

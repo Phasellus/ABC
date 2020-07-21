@@ -1,0 +1,13 @@
+.bannerMain.withBannerBox
+  .bannerMain__image(style=`background-image:url('./assets/images/employeePage/banner_main_employee.jpg');`)
+  .bannerMain__content
+    .bannerMain__leftBox
+      .bannerMain__slogan.textWhite
+        | Praca? <br>
+        span Mamy to, <br> czego szukasz!
+    .bannerMain__rightBox.-hiddenOnMobiles
+      include ../bannerFormBox/bannerFormBox-employee
+.positionRelative.responsiveMargins
+.-hiddenOnDesktops
+  .bannerMain__rightBox
+    include ../bannerFormBox/bannerFormBox-employee

@@ -1,0 +1,95 @@
+.newsList
+  display: block
+  width: 100%
+  padding: 130px 0 100px
+  transition: .2s
+  background-color: #fff
+
+  +max($bp-md)
+    padding: 100px 0 70px
+
+  +max($bp-xs)
+    padding: 60px 0 40px
+
+  &.-column
+    padding: 15px 0 20px
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+
+  &__item
+    width: 33.33%
+    padding: 0 30px
+    transition: .2s
+
+    +max($bp-lg)
+      padding: 0 15px
+
+    +max($bp-md)
+      width: 50%
+      margin-bottom: 40px
+
+    +max($bp-xs)
+      width: 100%
+      margin-bottom: 70px
+
+    .-column &
+      width: 100%
+
+      +max($bp-xs)
+        margin-bottom: 30px
+
+    &:last-child .newsItem.-row
+      border-bottom: none
+
+  &__additionalBox
+    display: block
+    width: 100%
+    padding: 80px 0 100px 30px
+    +font-lato
+    color: $masala
+    font-size: 20px
+    font-weight: 400
+    +max($bp-md)
+      padding: 50px 0 70px 0
+      font-size: 16px
+
+    & > p
+        display: inline-block
+
+    & > p > a
+      transition: .2s
+      color: $torchRed
+      font-size: 20px
+      font-weight: 400
+      text-decoration: underline
+
+      +max($bp-md)
+        font-size: 16px
+
+      &:hover
+        text-decoration: none
+
+  &__img
+    width: 60px
+    height: 60px
+    margin-right: 32px
+    vertical-align: middle
+
+    +max($bp-md)
+      display: block
+      margin: 0 auto 10px
+      text-align: center
+
+    &.-bold
+      font-weight: bold
+
+      +max($bp-md)
+        font-size: 16px
+

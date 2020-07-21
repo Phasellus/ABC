@@ -1,0 +1,12 @@
+// 1 Variant
+- const imagesAsPartner = [{img:"./assets/images/aboutUs/icons/world_on_hand.svg", text: 'Doświadczenie i jakość dojrzałego międzynarodowego środowiska korporacyjnego'}, {img:"./assets/images/aboutUs/icons/people_lightbulb.svg", text: 'Know how zdobyte dzięki wieloletniej współpracy z liderami sektorów gospodarki'}, {img:"./assets/images/aboutUs/icons/meditate.svg", text: 'Elastyczność krótkich ścieżek decyzyjnych i rozwiązania szyte na miarę'}]
+.iconsPanel.bgDarkGray.textWhite
+  .iconsPanel__content
+    .iconsPanel__servicesPanel
+      h1.iconsPanel__headerText Jako partner dla naszych klientów gwarantujemy:
+      .iconsPanel__listContainer
+        each val in imagesAsPartner
+          .iconsPanel__asPartnerBox
+            div(style=`background-image: url("${val.img}");`).iconsPanel__asPartnerIcon
+            .iconsPanel__asPartnerLabelBox
+              span.iconsPanel__traitText.-normalFontWeight=val.text

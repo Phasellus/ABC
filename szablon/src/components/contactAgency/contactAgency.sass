@@ -1,0 +1,283 @@
+@import '../../utils/styles/selectric'
+
+.contactAgency
+  display: flex
+  justify-content: center
+
+  &__content
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__wrapper
+    display: flex
+    justify-content: center
+    padding: 15px 0
+
+  &__main
+    display: flex
+    width: 85%
+    max-width: 1340px
+    justify-content: space-between
+    align-items: center
+    flex-direction: row
+
+    +max(1520)
+      flex-direction: column
+      width: 100%
+
+  &__map
+    position: relative
+
+    +max(960)
+      padding: 0
+  svg
+    width: 592px
+    height: 502px
+
+    +max(960)
+      max-width: 100%
+
+  &__desktopMap
+    display: block
+
+
+  &__selectBox
+    display: none
+    width: 450px
+    padding: 40px 0
+
+    +max(980)
+      display: block
+      width: 100%
+      max-width: 373px
+
+  &__merge
+    display: flex
+    padding: 10px
+    align-items: center
+    max-width: 700px
+    min-width: 700px
+
+    +max(980)
+      width: 100%
+      min-width: auto
+      padding: 0
+      flex-direction: column
+
+
+  &__details
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    +max(980)
+      width: 95%
+
+  &__title
+    display: flex
+    width: 100%
+    margin-bottom: 50px
+    +max(1520)
+      justify-content: center
+      padding: 5px 0 20px 0
+      margin-bottom: 40px
+    +max(980)
+      padding: 30px 0 0
+      font-size: 33px
+      font-weight: bold
+      width: auto
+      margin-bottom: 10px
+
+
+
+  &__title span
+    font-size: 28px
+    //color: $white
+    font-family: 'Lato', sans-serif
+    text-align: center
+    font-weight: 600
+
+    +max(980)
+      text-align: left
+      width: auto
+
+  &__info
+    display: flex
+    flex-direction: row
+    flex: 0 0 227px
+
+    +max(980)
+      display: none
+
+  &__icon
+    width: 46px
+    height: 44px
+    flex: 0 0 46px
+
+  &__icon img
+    display: none
+
+  &__text
+    display: flex
+    flex-direction: column
+    max-width: 227px
+    min-width: 227px
+    background-image: url("./../images/separatorBg.png")
+    background-position-x: -90px
+    background-repeat: repeat-y
+    font-weight: 600
+
+    +max(980)
+      background: none
+
+  &__separated
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 0
+
+    &:first-child .contactAgency__icon>img
+      display: block
+
+    &:first-child .contactAgency__item>span
+      border: none
+      text-decoration: none
+      font-weight: bold
+
+  &__item
+    display: block
+    //color: $white
+    font-size: 20px
+    font-family: 'Lato', sans-serif
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+
+  &__item span
+    border-bottom: solid 1px $white
+    padding-bottom: 2px
+    cursor: pointer
+    margin-left: 10px
+    word-break: break-all
+
+  &__arrow
+    width: 42px
+    height: 34px
+    flex: 0 0 42px
+
+    +max(980)
+      display: none
+
+  &__arrow img
+    display: none
+
+  &__contactWrapper
+    display: none
+    +max(980)
+      width: auto
+
+    &:first-child
+      display: block
+
+  &__contactInfo
+    display: flex
+    flex-direction: column
+    padding-left: 50px
+    align-items: baseline
+    font-weight: 600
+
+    +max(980)
+      align-items: center
+      padding: 0
+      width: auto
+
+  &__worker
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    padding-bottom: 20px
+
+  &__avatar
+    flex: 0 0 43px
+    width: 43px
+    position: relative
+    text-align: left
+
+  &__avatar img
+    width: 43px
+    height: 38px
+    position: absolute
+    top: -12px
+
+  &__workerInfo
+    display: flex
+    flex-direction: column
+    margin-left: 20px
+    font-weight: 600
+
+
+  &__workerInfo span
+    //color: $white
+    font-family: 'Lato', sans-serif
+    font-size: 20px
+
+
+  &__phone
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-bottom: 20px
+
+
+    &__icon
+      flex: 0 0 43px
+      width: 43px
+      text-align: left
+
+    &_icon img
+      width: 41px
+      height: 45px
+
+  &__phoneNumber
+    //color: $white
+    font-size: 20px
+    font-family: 'Lato', sans-serif
+    margin-left: 20px
+
+  &__email
+    display: flex
+    flex-direction: row
+    align-items: center
+
+
+    &__icon
+      flex: 0 0 43px
+      width: 43px
+      text-align: left
+
+    &_icon img
+      width: 39px
+      height: 31px
+
+  &__emailAddress
+    //color: $white
+    font-size: 20px
+    font-family: 'Lato', sans-serif
+    margin-left: 20px
+    padding-bottom: 2px
+    word-break: break-all
+
+.contactAgency__selectBox
+  +font-lato
+  .selectric
+    border: 0
+
+  .selectric .label
+    font-size: 17px
+
+  .selectric-items ul, .selectric-items li
+    font-size: 17px

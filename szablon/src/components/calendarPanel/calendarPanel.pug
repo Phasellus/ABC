@@ -1,0 +1,55 @@
+//calendar
+.calendarPanel.bgDarkGray.textWhite.shadow
+  .calendarPanel__content
+    .calendarPanel__wrapper
+      .calendarPanel__main
+        .calendarPanel__description
+          .calendarPanel__topic
+            span Kalendarium
+          .calendarPanel__text
+            span Tutaj znajdziesz wszelkie informacje o terminach publikacji raportów okresowych,
+                |konferencjach wynikowych, datach walnych zgromadzeń, oraz datach najistotniejszych zdarzeń dotyczących
+                |firmy Personnel Service.
+        .calendarPanel__calendarSector
+          .calendarPanel__shortInfo
+            span Dzisiaj jest: 3 kwietnia 2020
+          .calendarPanel__calendarBox
+            .calendarPanel__calendarWrapper
+              .calendarPanel__calendarSpace
+                .calendarPanel__currentMonthYear
+                  span Kwiecień 2020
+                .calendarPanel__days
+                  .calendarPanel__dayItem.event.active(data-event=`{"day":1, "weekday":"Poniedziałek"}`)
+                    span 1
+                  .calendarPanel__dayItem.event.disableForReal
+                    span
+                  - for(var i=3; i<=42;i++){
+                      -if(i%2==0){
+                        .calendarPanel__dayItem(data-event=`{"day":${i}, "weekday":"Poniedziałek"}`)
+                          span= i
+                      -}else if(i%3==0){
+                        -if(i%7==0){
+                          .calendarPanel__dayItem.event(data-event=`{"title":"Pełna nazwa najbliższego wydarzenia zaplanowanego na dany dzień.","day":${i},"weekday":"Piątek"}`)
+                            span= i
+                        -}else{
+                          .calendarPanel__dayItem.event(data-event=`{"title":"Test wydarzenia XYZ.","day":${i},"weekday":"Poniedziałek"}`)
+                            span= i
+                        -}
+                      -}else{
+                        .calendarPanel__dayItem.disabled(data-event=`{"day":${i}, "weekday":"Poniedziałek"}`)
+                          span= i
+                      -}
+                  - }
+            .calendarPanel__selectedDay
+              .calendarPanel__cardMonthYear
+                span Kwiecień 2020
+              .calendarPanel__cardDay
+                span
+              .calendarPanel__cardWeekday
+                span
+              .calendarPanel__cardSpace
+              .calendarPanel__cardDesc
+                span
+
+
+
