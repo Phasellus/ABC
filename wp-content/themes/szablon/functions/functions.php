@@ -147,3 +147,215 @@ function ajax_script(){ ?>
     </script><?php
 }
 add_action ( 'wp_head', 'ajax_script' );
+
+function custom_footer_menu()
+{
+    register_nav_menus(array(
+        'FooterMenu'=> __('Footer Menu')
+    ));
+}
+add_action('init', 'custom_footer_menu');
+
+class Footer_Walker extends Walker_Nav_Menu
+{
+    function start_lvl(&$output,$depth = 0, $args = array())
+    {
+    $output .='<li class="footerMenuCategory">'.'<div class="footerMenuCategory__titleBox"><i class="footerMenuCategory__icon fa fa-caret-right"></i>
+                <a>Dla Pracowdawcy</a></div>'
+                .'<ul class="footerMenuCategory__secondLevelMenu">';
+    }
+    function end_lvl( &$output, $depth = 1, $args = array() )
+    {
+            return parent::end_lvl($output, $depth);
+    }
+
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    {
+        if($depth>0)
+        {
+            $item_html = apply_filters('the_title', $item->title, $item->ID );
+            $output .= '<li class="footerMenuCategory__menuCategoryItem"><a href ="'.$item->url.'">' . $item_html . '</a></li>';
+        }
+        parent::start_el($item_html, $item, $depth, $args);
+    }
+
+
+    function end_el( &$output, $item, $depth = 0, $args = null )
+    {
+        if($depth > 0)
+            parent::end_el($output, $item, $depth);
+    }
+
+}
+
+add_action( 'tf_create_options', 'aa_options_creating_function' );
+require_once 'titan-framework-checker.php';
+
+function aa_options_creating_function() {
+
+    $titan = TitanFramework::getInstance( 'neat' );
+
+
+    $footer = $titan->createAdminPanel( array(
+        'name' => 'Footer'
+    ) );
+
+     $table1 = $footer->createTab( array(
+        'name' => 'SocialMedia',
+    ) );
+
+    $table1->createOption(array
+    (
+        'id'   => 'Icon_twitter',
+        'type' => 'upload',
+        'name' => 'Ikona Twitter',
+        'desc' => 'Dodaj ikone'
+
+    ));
+    $table1->createOption(array
+    (
+        'id'   => 'Link_twitter',
+        'type' => 'text',
+        'name' => 'Adres URL Twitter',
+        'desc' => 'Dodaj URL'
+
+    ));
+
+    $table1->createOption( array(
+        'id'   => 'Icon_facebook',
+        'type' => 'upload',
+        'name' => 'Ikona Facebook',
+        'desc' => 'Dadaj ikone'
+    ) );
+    $table1->createOption(array
+    (
+        'id'   => 'Link_facebook',
+        'type' => 'text',
+        'name' => 'Adres URL Facebook',
+        'desc' => 'Dodaj URL'
+
+    ));
+    $table1->createOption( array(
+        'id'   => 'Icon_linkedin',
+        'type' => 'upload',
+        'name' => 'Ikona Linkedin',
+        'desc' => 'Dodaj Ikone'
+    ) );
+    $table1->createOption(array
+    (
+        'id'   => 'Link_linkedin',
+        'type' => 'text',
+        'name' => 'Adres URL Linkedin',
+        'desc' => 'Dodaj URL'
+
+    ));
+    $table1->createOption( array(
+        'id'   => 'Icon_youtube',
+        'type' => 'upload',
+        'name' => 'Ikona Youtube',
+        'desc' => 'Dodaj Ikone'
+    ) );
+
+    $table1->createOption(array
+    (
+        'id'   => 'Link_youtube',
+        'type' => 'text',
+        'name' => 'Adres URL Youtube',
+        'desc' => 'Dodaj URL'
+
+    ));
+    $table1->createOption( array(
+        'type' => 'save'
+    ));
+
+    $table2 = $footer->createTab( array(
+        'name' => 'Info',
+    ) );
+
+    $table2->createOption((array
+    (
+        'id'   => 'Info',
+        'type' => 'text',
+        'name' => 'Iona SocialMedia',
+        'desc' => 'Dodaj ikone'
+    )
+    ));
+    $table2->createOption( array(
+        'type' => 'save'
+    ));
+
+    $table3 = $footer->createTab( array(
+        'name' => 'Description',
+    ) );
+
+    $table3->createOption((array
+    (
+        'id'   => 'Info_box',
+        'type' => 'textarea',
+        'name' => 'Iona SocialMedia',
+        'desc' => 'Dodaj ikone'
+    )
+    ));
+    $table3->createOption( array(
+        'type' => 'save'
+    ));
+
+    $table4 = $footer->createTab( array(
+        'name' => 'Logo',
+    ) );
+
+    $table4->createOption((array
+    (
+        'id'   => 'Logo',
+        'type' => 'upload',
+        'name' => 'Iona SocialMedia',
+        'desc' => 'Dodaj ikone'
+    )
+    ));
+    $table4->createOption( array(
+        'type' => 'save'
+    ));
+}
+
+
+function custom_footer_contact()
+{
+    register_nav_menus(array(
+        'FooterContact'=> __('Footer Menu Contact')
+    ));
+}
+add_action('init', 'custom_footer_contact');
+
+class Footer_Walker_Contact extends Walker_Nav_Menu
+{
+    function start_lvl(&$output, $depth = 0, $args = null)
+    {
+    }
+
+    function end_lvl(&$output, $depth = 0, $args = null)
+    {
+        if($depth>0)
+        {
+            parent::end_lvl($output, $depth);
+        }
+    }
+
+    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+
+        if (0 == $depth)
+        {
+            $item_html = apply_filters('the_title', $item->title, $item->ID );
+            $output .='<a href ="'.$item->url.'"class="footerRegulationMenu__item"><li>' . $item_html . '</li></a>';
+            return;
+        }
+    }
+
+    function end_el(&$output, $item, $depth = 0, $args = null)
+    {
+        if($depth > 0)
+        {
+            parent::end_el($output, $item, $depth);
+        }
+    }
+}
+

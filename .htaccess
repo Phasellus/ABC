@@ -1,5 +1,8 @@
 
 # BEGIN WordPress
+# Dyrektywy zawarte między `BEGIN WordPress` oraz `END WordPress`
+# są generowane dynamicznie i powinny być modyfikowane tylko za pomocą
+# filtrów WordPressa. Zmiany dokonane bezpośrednio tutaj będą nadpisywane.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /soft-fusion/
@@ -9,4 +12,14 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /soft-fusion/index.php [L]
 </IfModule>
 
+<IfModule mod_headers.c>
+ <FilesMatch "\.(jpg|jpeg|png|gif|swf|JPG)$">
+ Header set Cache-Control "max-age=4838400, public"
+ </FilesMatch>
+
+ <FilesMatch "\.(css|js)$">
+ Header set Cache-Control "max-age=4838400, private"
+ </FilesMatch>
+
+ </IfModule>
 # END WordPress

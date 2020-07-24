@@ -32,3 +32,68 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div class="headerPosition">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__box">
+                <div class="header__item -logo"><img class="logo" src="<?php echo TEMP_URI;?>/assets/images/logo/logo.svg"></div>
+                <div class="header__item -nav">
+                    <!-- START NAV-->
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <?php wp_nav_menu( array(
+                                'theme_location'=>'new_menu',
+                                'walker' => new Nav_Walker(),
+                                'depth' => 2,
+                                'items_wrap' => '%3$s',
+                                'container' => false,
+                            ));?>
+                        </ul>
+                    </nav>
+                    <!-- END NAV-->
+                </div>
+                <div class="header__item -switchLang">
+                    <div class="languagesSwitcher">
+                        <select class="languagesSwitcher__select">
+                            <option class="languagesSwitcher__option" value="">Change language</option>
+                            <option class="languagesSwitcher__option" value="http://localhost:9000/build/main.html?lang=pl">PL</option>
+                            <option class="languagesSwitcher__option" value="http://localhost:9000/build/main.html?lang=en">EN</option>
+                            <option class="languagesSwitcher__option" value="http://localhost:9000/build/main.html?lang=de">DE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="header__item -mobile">
+                    <!-- START MOBILE NAV-->
+                    <div class="mobileNav">
+                        <div class="mobileNav__menuIconBox"><img class="mobileNav__menuIcon" src="<?php echo TEMP_URI;?>/assets/images/mobileMenu/menuMobile.png">
+                            <div class="mobileNav__menuIconText">menu</div>
+                        </div>
+                        <div class="mobileNav__container">
+                            <div class="mobileNav__buttonBox"><img class="mobileNav__closeButton" src="<?php echo TEMP_URI;?>/assets/images/mobileMenu/closeMenuMobile.png"></div>
+                            <nav class="mobileNav__nav">
+                                <ul class="mobileNav__list">
+                                    <li class="mobileNav__item"><a class="mobileNav__link" href="#">O nas</a></li>
+                                    <li class="mobileNav__item"><a class="mobileNav__link" href="#">Relacje inwestorskie</a></li>
+                                    <li class="mobileNav__item"><a class="mobileNav__link" href="#">Aktualności</a></li>
+                                    <li class="mobileNav__item"><a class="mobileNav__link" href="#">Kontakt</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobileNav__languages">
+                                <div class="languagesSwitcher">
+                                    <select class="languagesSwitcher__select">
+                                        <option class="languagesSwitcher__option" value="">Change language</option>
+                                        <option class="languagesSwitcher__option" value="http://localhost:9000/build/main.html?lang=pl">PL</option>
+                                        <option class="languagesSwitcher__option" value="http://localhost:9000/build/main.html?lang=en">EN</option>
+                                        <option class="languagesSwitcher__option" value="http://localhost:9000/build/main.html?lang=de">DE</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END MOBILE NAV-->
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div id="blurredOverlay"></div>
