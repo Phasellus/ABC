@@ -1,4 +1,6 @@
 <?php
+include "post-types/SF_Article.php";
+include "post-types/SF_Home.php";
 if(! defined( 'ABSPATH' )) return;
 function generateRandomString($length = 20)
 {
@@ -200,11 +202,11 @@ function aa_options_creating_function() {
         'name' => 'Footer'
     ) );
 
-     $table1 = $footer->createTab( array(
+     $IconSocialMedia = $footer->createTab( array(
         'name' => 'SocialMedia',
     ) );
 
-    $table1->createOption(array
+    $IconSocialMedia->createOption(array
     (
         'id'   => 'Icon_twitter',
         'type' => 'upload',
@@ -212,7 +214,7 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj ikone'
 
     ));
-    $table1->createOption(array
+    $IconSocialMedia->createOption(array
     (
         'id'   => 'Link_twitter',
         'type' => 'text',
@@ -221,13 +223,13 @@ function aa_options_creating_function() {
 
     ));
 
-    $table1->createOption( array(
+    $IconSocialMedia->createOption( array(
         'id'   => 'Icon_facebook',
         'type' => 'upload',
         'name' => 'Ikona Facebook',
         'desc' => 'Dadaj ikone'
     ) );
-    $table1->createOption(array
+    $IconSocialMedia->createOption(array
     (
         'id'   => 'Link_facebook',
         'type' => 'text',
@@ -235,13 +237,13 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj URL'
 
     ));
-    $table1->createOption( array(
+    $IconSocialMedia->createOption( array(
         'id'   => 'Icon_linkedin',
         'type' => 'upload',
         'name' => 'Ikona Linkedin',
         'desc' => 'Dodaj Ikone'
     ) );
-    $table1->createOption(array
+    $IconSocialMedia->createOption(array
     (
         'id'   => 'Link_linkedin',
         'type' => 'text',
@@ -249,14 +251,14 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj URL'
 
     ));
-    $table1->createOption( array(
+    $IconSocialMedia->createOption( array(
         'id'   => 'Icon_youtube',
         'type' => 'upload',
         'name' => 'Ikona Youtube',
         'desc' => 'Dodaj Ikone'
     ) );
 
-    $table1->createOption(array
+    $IconSocialMedia->createOption(array
     (
         'id'   => 'Link_youtube',
         'type' => 'text',
@@ -264,15 +266,15 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj URL'
 
     ));
-    $table1->createOption( array(
+    $IconSocialMedia->createOption( array(
         'type' => 'save'
     ));
 
-    $table2 = $footer->createTab( array(
+    $TitleFooterText = $footer->createTab( array(
         'name' => 'Info',
     ) );
 
-    $table2->createOption((array
+    $TitleFooterText->createOption((array
     (
         'id'   => 'Info',
         'type' => 'text',
@@ -280,15 +282,15 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj ikone'
     )
     ));
-    $table2->createOption( array(
+    $TitleFooterText->createOption( array(
         'type' => 'save'
     ));
 
-    $table3 = $footer->createTab( array(
+    $TitleFooterContent = $footer->createTab( array(
         'name' => 'Description',
     ) );
 
-    $table3->createOption((array
+    $TitleFooterContent->createOption((array
     (
         'id'   => 'Info_box',
         'type' => 'textarea',
@@ -296,15 +298,15 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj ikone'
     )
     ));
-    $table3->createOption( array(
+    $TitleFooterContent->createOption( array(
         'type' => 'save'
     ));
 
-    $table4 = $footer->createTab( array(
+    $IconLogoPage = $footer->createTab( array(
         'name' => 'Logo',
     ) );
 
-    $table4->createOption((array
+    $IconLogoPage->createOption((array
     (
         'id'   => 'Logo',
         'type' => 'upload',
@@ -312,7 +314,7 @@ function aa_options_creating_function() {
         'desc' => 'Dodaj ikone'
     )
     ));
-    $table4->createOption( array(
+    $IconLogoPage->createOption( array(
         'type' => 'save'
     ));
 }
@@ -357,5 +359,26 @@ class Footer_Walker_Contact extends Walker_Nav_Menu
             parent::end_el($output, $item, $depth);
         }
     }
+}
+$NewPost = new SF_Home();
+
+
+add_action('init', 'rewrite_new_url');
+function rewrite_new_url()
+{
+    global $wp_rewrite;
+
+    add_rewrite_rule(
+            'home/blogo-strona([^/]*)/?$',
+        'index.php?page_id=237',
+        'top'
+    );
+
+    add_rewrite_rule(
+        'home/blogo-strona([^/]*)/page/([0-9]{1,})/?$',
+        'index.php?page_id=237&paged=$matches[2]',
+        'top'
+    );
+    $wp_rewrite->flush_rules();
 }
 

@@ -66,4 +66,6 @@ class SF_example extends SF_abstract_post
 		);
 		return $meta_boxes;
 	}
+
+
 }

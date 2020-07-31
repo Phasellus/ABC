@@ -1,36 +1,11 @@
 <?php
-/**
- * The template for displaying all single posts and attachments
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-
+include_once "functions/post-types/SF_Article.php";
 get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
         <?php
-        while ( have_posts() ) :
-            the_post();
-            get_template_part( 'content', get_post_format() );
-
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-            the_post_navigation(
-                array(
-                    'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-                        '<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-                        '<span class="post-title">%title</span>',
-                    'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-                        '<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-                        '<span class="post-title">%title</span>',
-                )
-            );
-        endwhile;
+        SF_Article::getArticle();
         ?>
     </main>
 </div>
