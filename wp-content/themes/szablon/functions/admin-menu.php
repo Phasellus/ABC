@@ -47,3 +47,27 @@ function my_htaccess_contents( $rules )
  </IfModule>";
 }
 add_filter('mod_rewrite_rules', 'my_htaccess_contents');
+
+function custom_header_menu()
+{
+    register_nav_menus(array(
+        'Main_Menu'=> __('Main Menu')
+    ));
+}
+add_action('init', 'custom_header_menu');
+
+function custom_footer_menu()
+{
+    register_nav_menus(array(
+        'BottomFirstMenu'=> __('Bottom First Menu')
+    ));
+}
+add_action('init', 'custom_footer_menu');
+
+function custom_footer_contact()
+{
+    register_nav_menus(array(
+        'BottomContactMenu'=> __('Bottom Contact Menu')
+    ));
+}
+add_action('init', 'custom_footer_contact');

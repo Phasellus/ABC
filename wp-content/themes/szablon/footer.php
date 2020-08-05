@@ -3,10 +3,9 @@
     <div class="footer__content">
         <div class="footer__menuContent">
             <ul class="footerMenu">
-
                         <?php wp_nav_menu( array(
-                            'theme_location'=>'FooterMenu',
-                            'walker' => new Footer_Walker(),
+                            'theme_location'=>'BottomFirstMenu',
+                            'walker' => new SF_Bottom_Walker(),
                             'depth' => 2,
                             'items_wrap' => '%3$s',
                             'container' => false,
@@ -63,8 +62,8 @@
             </div>
             <ul class="footerRegulationMenu">
                     <?php wp_nav_menu( array(
-                        'theme_location'=>'FooterContact',
-                        'walker' => new Footer_Walker_Contact(),
+                        'theme_location'=>'BottomContactMenu',
+                        'walker' => new SF_Bottom_Contact_Walker(),
                         'depth' => 2,
                         'items_wrap' => '%3$s',
                         'container' => false,

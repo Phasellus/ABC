@@ -8,7 +8,7 @@ while ($i) {
     {
     the_row();
     $block = get_row_layout();
-    include TEMP_VAR . '/template-news/' . $block . '.php';
+    include TEMP_VAR . '/template/template-news/' . $block . '.php';
     }
     else
     {

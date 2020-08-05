@@ -1,5 +1,4 @@
 <?php
-include_once "SF_post.php";
 
 class SF_Home extends SF_abstract_post
 {
@@ -12,40 +11,16 @@ class SF_Home extends SF_abstract_post
 
     public function createMeta($meta_boxes)
     {
-        $prefix = 'sf_';
-        $meta_boxes[] = array(
-            'title'      => __( 'Extra', 'tag' ),
-            'id'         => 'PostMeta',
-            'post_types' => array(self::$slugpost),
-            'context'    => 'normal',
-            'priority'   => 'high',
-            'autosave'   => true,
-            'fields'     => array(
-
-                array(
-                    'name' => __( 'Tytuł Posta', 'tag' ),
-                    'id'   => '{$prefix}title',
-                    'type' => 'text',
-                ),
-                array(
-                    'name' => __( 'Treść Posta', 'tag' ),
-                    'id'   => '{$prefix}title_area',
-                    'type' => 'textarea',
-                ),
-            ),
-        );
-    return $meta_boxes;
-}
+    }
 
 
     public static function getArticle(){
-        $paged = get_query_var( 'paged', 1 );
+
         $args = array(
             'post_type' => static::$slugpost,
             'post_status' => 'publish',
             'order' => 'DESC',
             'posts_per_page' => 5,
-            'paged' => $paged
         );
         global $wp_query;
         $query = new WP_Query( $args );
@@ -72,7 +47,18 @@ class SF_Home extends SF_abstract_post
                             </div>
                         </div>
                     </div>
-                </div>           <?php }
+                </div>           <?php } ?>
+            <div class="pagination">
+                <?php
+                echo paginate_links( array(
+                    'total'        => $query->max_num_pages,
+                    'prev_text'    => sprintf( '<i></i> %1$s', __( 'Poprzedni', 'text-domain' ) ),
+                    'next_text'    => sprintf( '%1$s <i></i>', __( 'Nastepny', 'text-domain' ) ),
+
+                ) );
+                ?>
+            </div>
+            <?php
         }
     }
 }

@@ -1,7 +1,7 @@
 <?php
 $title = get_sub_field('tytul');
-$DesctriptionFirst= get_sub_field('desctriptiofFirst');
-$DesctriptionSecond= get_sub_field('desctriptiosecond');
+$desctriptionFirst= get_sub_field('desctriptiofFirst');
+$desctriptionSecond= get_sub_field('desctriptiosecond');
 
 ?>
 <div class="iconsPanel textWhite blur" style="background-image: url('<?php echo TEMP_URI; ?>./assets/images/blur_mock.jpg')">
@@ -13,11 +13,11 @@ $DesctriptionSecond= get_sub_field('desctriptiosecond');
             <div class="iconsPanel__whoWeRecruitBox">
                 <div class="iconsPanel__recruitmentBox">
                     <div class="iconsPanel__whoWeRecruitIcon" style="background-image: url(&quot;<?php echo TEMP_URI; ?>./assets/images/aboutUs/icon_wrench.svg&quot;);"></div>
-                    <div class="iconsPanel__whoWeRecruitLabelBox"><span class="-normalFontWeight"><?php echo $DesctriptionFirst; ?></span></div>
+                    <div class="iconsPanel__whoWeRecruitLabelBox"><span class="-normalFontWeight"><?php echo $desctriptionFirst; ?></span></div>
                 </div>
                 <div class="iconsPanel__recruitmentBox">
                     <div class="iconsPanel__whoWeRecruitIcon" style="background-image: url(&quot;<?php echo TEMP_URI; ?>./assets/images/aboutUs/icon_worker.svg&quot;);"></div>
-                    <div class="iconsPanel__whoWeRecruitLabelBox"><span class="-normalFontWeight"><?php echo $DesctriptionSecond; ?></span></div>
+                    <div class="iconsPanel__whoWeRecruitLabelBox"><span class="-normalFontWeight"><?php echo $desctriptionSecond; ?></span></div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 <?php
 
-include_once "SF_post.php";
 class SF_Article extends SF_abstract_post
 {
 

@@ -42,8 +42,8 @@
                     <nav class="nav">
                         <ul class="nav__list">
                             <?php wp_nav_menu( array(
-                                'theme_location'=>'new_menu',
-                                'walker' => new Nav_Walker(),
+                                'theme_location'=>'Main_Menu',
+                                'walker' => new SF_Nav_Walker(),
                                 'depth' => 2,
                                 'items_wrap' => '%3$s',
                                 'container' => false,
