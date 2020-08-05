@@ -1,19 +1,22 @@
 <?php
-include_once "functions/post-types/SF_Home.php";
 get_header(); ?>
-<br><br><br><br>
-<div class="articleContent">
-    <div class="articleContent__title">Nowe Wpisy Blogowe!!!!<br><br></div>
-</div>
-<div class="articleContent">
-    <div class="articleContent__content">
-        <?php
-        SF_Home::getArticle();
-        $abc = get_the_ID();
-        echo $abc;
-        ?>
 
+<section class="newsList -column">
+    <div class="newsList__container">
+        <div class="newsList__box">
+            <?php
+            SF_Home::getArticle();
+            ?>
         </div>
-</div>
+    </div>
+</section>
+<?php
+$close_div = 0;
+while ( have_rows( 'page_blocks' ) ) {
+    the_row();
+    $block = get_row_layout();
+    include TEMP_VAR.'/template-home/'.$block.'.php';
+
+}?>
 
 <?php get_footer(); ?>

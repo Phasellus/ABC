@@ -1,6 +1,7 @@
 <?php
 include "post-types/SF_Article.php";
 include "post-types/SF_Home.php";
+
 if(! defined( 'ABSPATH' )) return;
 function generateRandomString($length = 20)
 {
@@ -382,3 +383,25 @@ function rewrite_new_url()
     $wp_rewrite->flush_rules();
 }
 
+function your_prefix_register_meta_boxes( $meta_boxes ) {
+    $prefix = 'prefix-';
+
+    $meta_boxes[] = [
+        'title'      => esc_html__( 'Untitled', 'online-generator' ),
+        'id'         => 'untitled',
+        'post_types' => ['post'],
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'fields'     => [
+            [
+                'type' => 'text',
+                'id'   => $prefix . 'text_yi0w7d6b4f8',
+                'name' => esc_html__( 'Text', 'online-generator' ),
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+}
+
+add_theme_support( 'post-thumbnails' );

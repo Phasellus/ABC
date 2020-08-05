@@ -96,4 +96,3 @@
         </div>
     </header>
 </div>
-<div id="blurredOverlay"></div>

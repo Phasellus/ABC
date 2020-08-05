@@ -1,6 +1,7 @@
 <?php
 $opis = get_sub_field('tekst');
 ?>
+<div class="positionRelative -noMarginTop">
 <div class="calendarPanel bgDarkGray textWhite shadow">
         <div class="calendarPanel__content">
             <div class="calendarPanel__wrapper">
@@ -74,3 +75,4 @@ $opis = get_sub_field('tekst');
             </div>
         </div>
     </div>
+</div>

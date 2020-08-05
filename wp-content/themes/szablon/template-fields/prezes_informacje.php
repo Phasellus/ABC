@@ -4,7 +4,7 @@ $obraz_url = wp_get_attachment_image_url($obraz['ID'],'');
 $tekst = get_sub_field('imie');
 $tekst_info= get_sub_field('opis');
 ?>
-
+<div class="iconsPanel textWhite bgDarkGray">
 <div class="chairMan">
         <div class="chairMan__content">
             <div class="chairMan__leftBox"><img class="chairMan__photo" src="<?php echo $obraz_url;?>"></div>
@@ -13,4 +13,5 @@ $tekst_info= get_sub_field('opis');
             </div>
         </div>
         <div class="chairMan__name"><?php echo $tekst;?></div>
+</div>
 </div>

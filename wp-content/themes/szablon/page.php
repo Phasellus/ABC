@@ -1,6 +1,9 @@
 
 <?php get_header();
 //the_post();if( have_rows('fields') ) {  $i=0;
+?>
+
+<?php
 $close_div = 0;
 while ( have_rows( 'page_blocks' ) ) {
     the_row();
@@ -8,5 +11,4 @@ while ( have_rows( 'page_blocks' ) ) {
     include TEMP_VAR.'/template-fields/'.$block.'.php';
 
 }?>
-
 <?php get_footer();
