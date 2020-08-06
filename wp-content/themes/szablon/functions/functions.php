@@ -35,18 +35,23 @@ add_action('init', 'rewrite_new_url');
 function rewrite_new_url()
 {
     global $wp_rewrite;
+    global $wp;
 
-    add_rewrite_rule(
+        add_rewrite_rule(
             'home/blogo-strona([^/]*)/?$',
-        'index.php?page_id=237',
-        'top'
-    );
+            'index.php?page_id=237',
+            'top'
+        );
 
     add_rewrite_rule(
         'home/blogo-strona([^/]*)/page/([0-9]{1,})/?$',
         'index.php?page_id=237&paged=$matches[2]',
         'top'
     );
+    if ((add_query_arg( $wp->query_vars)) == ('/soft-fusion/home/blogo-strona/')){
     $wp_rewrite->flush_rules();
+    }
+
+
 }
 
