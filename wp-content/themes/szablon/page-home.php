@@ -15,7 +15,7 @@ $close_div = 0;
 while ( have_rows( 'page_blocks' ) ) {
     the_row();
     $block = get_row_layout();
-    include TEMP_VAR.'/template/template-home/'.$block.'.php';
+    include TEMP_VAR.'/template/home/'.$block.'.php';
 
 }?>
 
