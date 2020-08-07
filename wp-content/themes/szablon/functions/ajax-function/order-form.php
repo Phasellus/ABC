@@ -32,8 +32,8 @@ function show_json()
     else
     {
         $results = array(
-            "error" => esc_html(1),
-            'msg' => esc_html('Nieprawidlowe dane'),
+            "error" => 1,
+            'msg' => 'Nieprawidlowe dane',
         );
         echo esc_html(json_encode($results));
         exit();

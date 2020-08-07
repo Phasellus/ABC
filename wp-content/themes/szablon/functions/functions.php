@@ -66,6 +66,5 @@ function rewrite_new_url()
     return false;
 }
 add_filter( 'image_size_names_choose', 'custom_image_sizes' );
-add_theme_support('post-thumbnails');
 
 
