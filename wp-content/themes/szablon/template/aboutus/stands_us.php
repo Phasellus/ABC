@@ -12,7 +12,7 @@ $title = get_sub_field('naglowek');
                 $titleDescription = get_sub_field('titleservice');
                 $descriptionService = get_sub_field('descriptionservice');
                 $image = get_sub_field('icon');
-                $image_url = wp_get_attachment_image_url($image['ID'],'');
+                $image_url = wp_get_attachment_image_url($image['ID'],'Icon');
                 ?>
                 <div class="iconsPanel__traitsBox">
                     <div class="iconsPanel__traitIcon" style="background-image: url(<?php echo $image_url; ?>)"></div><span class="iconsPanel__traitName"><?php echo $titleDescription; ?></span>

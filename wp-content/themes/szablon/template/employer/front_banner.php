@@ -1,7 +1,10 @@
-
+<?php
+$image = get_sub_field('banner');
+$imageurl = wp_get_attachment_image_url($image['ID'],'Banner');
+?>
 <div id="blurredOverlay"></div>
 <div class="bannerMain withBannerBox">
-    <div class="bannerMain__image" style="background-image:url('<?php echo TEMP_URI;?>./assets/images/employeePage/banner_main_employee.jpg');"></div>
+    <div class="bannerMain__image" style="background-image:url('<?php echo $imageurl ?>');"></div>
     <div class="bannerMain__content">
         <div class="bannerMain__leftBox">
             <div class="bannerMain__slogan textWhite">Praca? <br><span>Mamy to, <br> czego szukasz!</span></div>

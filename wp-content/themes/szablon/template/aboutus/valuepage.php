@@ -1,7 +1,7 @@
 <?php
 $title = get_sub_field('thetitle');
 $image = get_sub_field('image');
-$image_url = wp_get_attachment_image_url($image['ID'],'');
+$image_url = wp_get_attachment_image_url($image['ID'],'Blok');
 ?>
 
 <div class="contentPanel bgWhite textDark">

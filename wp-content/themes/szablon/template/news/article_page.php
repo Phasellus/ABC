@@ -1,6 +1,6 @@
 <?php
 $image = get_sub_field('icon');
-$imageurl = wp_get_attachment_image_url($image['ID'],'');
+$imageurl = wp_get_attachment_image_url($image['ID'],'Icon');
 $title = get_sub_field('e_mail');
 ?>
 

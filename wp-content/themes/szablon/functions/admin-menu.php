@@ -30,8 +30,11 @@ add_filter('wp_get_attachment_image_src', 'filter_url_img' );
 add_action('wp_head','add_ajax_url');
 function add_ajax_url()
 {
-    $admin_url = admin_url('admin-ajax.php');
-    echo "<script>var ajaxurl = \"{$admin_url}\"; </script>";
+    ?>
+    <script type="text/javascript">
+        const ajax_link = '<?php echo admin_url( "admin-ajax.php?action=show_json" ); ?>';
+        const token = '<?php echo wp_create_nonce( "secure_nonce_name" ); ?>';
+    </script><?php
 }
 
 function my_htaccess_contents( $rules )

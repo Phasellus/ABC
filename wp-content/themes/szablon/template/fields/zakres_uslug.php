@@ -11,7 +11,7 @@ $naglowek = get_sub_field('naglowek');
                     the_row();
                     $tresc = get_sub_field('tekst_uslugi');
                     $obraz1 = get_sub_field('ikona');
-                    $obraz1_url = wp_get_attachment_image_url($obraz1['ID'],'');
+                    $obraz1_url = wp_get_attachment_image_url($obraz1['ID'],'Icon');
                     ?>
                 <div class="iconsPanel__servicesBox">
                     <div class="iconsPanel__servicesIcon" style="background-image: url('<?php echo $obraz1_url; ?>');"></div>

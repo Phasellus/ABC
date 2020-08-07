@@ -1,7 +1,7 @@
 <?php
 $title = get_sub_field('title');
 $image = get_sub_field('icon');
-$imageurl = wp_get_attachment_image_url($image['ID'],'');
+$imageurl = wp_get_attachment_image_url($image['ID'],'Icon');
 $namepress = get_sub_field('name');
 $phone = get_sub_field('phone');
 $email = get_sub_field('e_mail');

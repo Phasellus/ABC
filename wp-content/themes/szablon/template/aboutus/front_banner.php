@@ -1,6 +1,6 @@
 <?php
 $image = get_sub_field('banner');
-$image_url = wp_get_attachment_image_url($image['ID'],'');
+$image_url = wp_get_attachment_image_url($image['ID'],'Banner');
 
 ?>
 <div id="blurredOverlay"></div>

@@ -1,6 +1,6 @@
 <?php
 $obraz = get_sub_field('obraz');
-$obraz_url = wp_get_attachment_image_url($obraz['ID'],'');
+$obraz_url = wp_get_attachment_image_url($obraz['ID'],'TimeLine');
 ?>
 <div class="iconsPanel textWhite bgDarkGray">
 <section class="ourStory">

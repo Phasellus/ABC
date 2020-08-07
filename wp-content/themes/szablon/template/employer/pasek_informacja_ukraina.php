@@ -1,6 +1,6 @@
 <?php
 $obraz = get_sub_field('banner');
-$obraz_url = wp_get_attachment_image_url($obraz['ID'],'');
+$obraz_url = wp_get_attachment_image_url($obraz['ID'],'UkraineSegment');
 $tekst = get_sub_field('tytul');
 $link = get_sub_field('przycisk');
 $tekst_info= get_sub_field('tresc');

@@ -1,6 +1,6 @@
 <?php
 $obraz = get_sub_field('obrazek');
-$obraz_url = wp_get_attachment_image_url($obraz['ID'],'');
+$obraz_url = wp_get_attachment_image_url($obraz['ID'],'Blok');
 $tekst = get_sub_field('tekst');
 $tekst_info= get_sub_field('tekst_informacja');
 ?>

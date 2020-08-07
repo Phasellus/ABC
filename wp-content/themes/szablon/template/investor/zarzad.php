@@ -1,8 +1,8 @@
 <?php
 $bossfoto = get_sub_field('fotografia_prezes1');
-$bossfoto_url = wp_get_attachment_image_url($bossfoto['ID'],'');
+$bossfoto_url = wp_get_attachment_image_url($bossfoto['ID'],'Management');
 $vicebossfoto = get_sub_field('fotografia_prezas2');
-$vicebossfoto_url = wp_get_attachment_image_url($vicebossfoto['ID'],'');
+$vicebossfoto_url = wp_get_attachment_image_url($vicebossfoto['ID'],'Management');
 $contact = get_sub_field('kontakt');
 $bossname= get_sub_field('daneprezesa');
 $vicebossname= get_sub_field('danezastepcy');

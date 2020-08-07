@@ -14,6 +14,8 @@ class SF_Article extends SF_abstract_post
     }
     public function createMeta($meta_boxes)
     {
+
+        return $meta_boxes;
     }
     public static function getNews(){
         $post_page = 3; //Ilosc postów wyswietlanych na jednej stonie
@@ -32,7 +34,7 @@ class SF_Article extends SF_abstract_post
                 <div class="newsList__item">
                     <div class="newsItem">
                         <div class="newsItem__box">
-                            <div class="newsItem__item"><?php the_post_thumbnail('THUMB') ?></div>
+                            <div class="newsItem__item"><img class="newsItem__img" src="<?php the_post_thumbnail('Article'); ?></div>
                             <div class="newsItem__item"><span class="newsItem__date"><?php echo get_the_date() ?></span></div>
                             <div class="newsItem__item"><span class="newsItem__title"><?php echo get_the_title() ?></span></div>
                             <div class="newsItem__item">

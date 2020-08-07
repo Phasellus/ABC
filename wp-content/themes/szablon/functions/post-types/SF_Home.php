@@ -11,6 +11,7 @@ class SF_Home extends SF_abstract_post
 
     public function createMeta($meta_boxes)
     {
+        return $meta_boxes;
     }
 
 

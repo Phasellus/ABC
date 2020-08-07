@@ -1,7 +1,7 @@
 <?php
 //dane segmentu
 $obraz = get_sub_field('obrazek');
-$obraz_url = wp_get_attachment_image_url($obraz['ID'],'');
+$obraz_url = wp_get_attachment_image_url($obraz['ID'],'Blok');
 $tekst = get_sub_field('tekst');
 $link = get_sub_field('przycisk');
 $tekst_info= get_sub_field('tekst_informacja');
